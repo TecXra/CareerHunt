@@ -9,7 +9,7 @@
         <div class="col-lg-6" id="reg-col">
             <ul id="nav-reg1" class="nav navbar-nav">
                     <li id="nav-reg12"><a href="index2">Home</a></li>
-                    <li id="nav-reg12"><a href="{{ URL::to('index')}}">Logout</a> </li>
+                    <a href="{{ route('logout') }}"><i class="icon ion-android-exit"></i> Logout</a>
                 </ul>
         </div>
     </div>

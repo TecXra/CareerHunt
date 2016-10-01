@@ -12,8 +12,7 @@
 <!--
                     <li id="nav-reg12"><a href="{{ URL::to('jsprofile')}}">Goto Profile</a></li>
 -->
-                    <li id="nav-reg12"><a href="{{ URL::to('index')}}">Logout</a> </li>
-                </ul>
+                    <a href="{{ route('logout') }}"><i class="icon ion-android-exit"></i> Logout</a>                </ul>
         </div>
     </div>
 </div>

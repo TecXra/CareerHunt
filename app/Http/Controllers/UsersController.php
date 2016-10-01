@@ -26,7 +26,7 @@ class UsersController extends Controller {
 	// Logout the user
 	public function logout(){
 		Auth::logout();
-		return Redirect::to('/');
+		return Redirect::to('index');
 	}
 
 	// Login the user

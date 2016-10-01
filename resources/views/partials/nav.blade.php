@@ -51,7 +51,7 @@
                                 <li role="presentation" class="divider"></li>
                             @endif
                             <li>
-                                <a href="{{ URL::to('auth/logout') }}"><i class="fa fa-sign-out"></i> Logout</a>
+                                <a href="{{ route('logout') }}"><i class="icon ion-android-exit"></i> Logout</a>
                             </li>
                         </ul>
                     </li>

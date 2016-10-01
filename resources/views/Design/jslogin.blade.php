@@ -87,7 +87,7 @@ button {
             <div class="row" id="login">
                 <div class="col-md-3"></div>
                 <div class="col-md-6" id="login-form">
-                    {!! Form::open(array('url' => URL::to('auth/login'), 'method' => 'post', 'files'=> true)) !!}
+                    {!! Form::open(array('action' => 'UsersController@login')) !!}
             <div class="form-group  {{ $errors->has('email') ? 'has-error' : '' }}">
                 {!! Form::label('email', "E-Mail Address", array('class' => 'control-label')) !!}
                 <div class="controls">
