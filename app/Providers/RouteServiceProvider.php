@@ -24,7 +24,20 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
-        //
+        $router->filter('auth', function()
+        {
+            if (Auth::guest())
+            {
+                if (Request::ajax())
+                {
+                    return Response::make('Unauthorized', 401);
+                }
+                else
+                {
+                    return Redirect::guest('/');
+                }
+            }
+        });
 
         parent::boot($router);
     }

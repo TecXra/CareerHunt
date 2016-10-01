@@ -172,11 +172,30 @@ Route::get('jslogin','JobSeekerController@jslogin');
 
 Route::get('jscv','JobSeekerController@jscv');
 
+Route::resource('users', 'UsersController', array('only' => array('show')));
+Route::post('login', 'UsersController@login');
+Route::post('make', 'UsersController@register');
+Route::get('logout', 'UsersController@logout')->name('logout');
+Route::post('resetPassword/{id}','UsersController@resetPassword');
 
 //});
 
+//Route::resource('users','DesignController');
+Route::group(array('before' => 'auth'), function()
+{
+    Route::get('hud', 'HomeController@index')->name('hud');
+    Route::get('search', 'HomeController@search')->name('search');
+    Route::get('profile', 'UsersController@index')->name('profile');
+    Route::get('clients', 'ClientsController@index')->name('clients');
+    Route::delete('clients/{id}', 'ClientsController@destroy');
+    Route::resource('projects', 'ProjectsController', array('only' => array('show')));
 
 
+//  Route::delete('projects/{id}/remove', array('uses' => 'ProjectsController@remove', 'as' => 'projects.remove') );
+//    Route::get('projects/{id}/files', array('uses' => 'ProjectsController@files', 'as' => 'projects.files' ));
+//    Route::post('projects/{id}/files', array('uses' => 'FilesController@store', 'as' => 'files.store' ));
+//    Route::delete('projects/{id}/files', array('uses' => 'FilesController@destroy', 'as' => 'files.remove' ));
+});
 
 
 

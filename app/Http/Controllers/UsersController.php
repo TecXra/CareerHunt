@@ -15,7 +15,7 @@ use App\Project;
 use App\Task;
 use App\Credential;
 
-class UsersController extends BaseController {
+class UsersController extends Controller {
 
 	// Go to user settings page
 	public function index()
@@ -51,7 +51,7 @@ class UsersController extends BaseController {
 		    return Redirect::back()->withErrors($validator)->withInput();
 		}else{
 			if( Auth::attempt(array('email' => $email, 'password' => $password)) ){				
-				return Redirect::to('hud');
+				return Redirect::to('jsdashboard');
 			}else{				
 				$validator->getMessageBag()->add('input', 'Incorrect email or password');
 				return Redirect::back()->withErrors($validator)->withInput();;
@@ -62,19 +62,19 @@ class UsersController extends BaseController {
 	// Register the user and start a new session
 	public function register()
 	{	
-		$fullName	=	Input::get('fullName');
+		$name	=	Input::get('name');
 		$email 		=	Input::get('email');
 		$password	=	Input::get('password');	
 
 		// lets validate the users input
 		$validator = Validator::make(
 			array(
-					'fullName' 	=> 	$fullName,
+					'name' 	=> 	$name,
 					'email' 	=>	$email,
 					'password' 	=> 	$password
 			),
 			array(
-					'fullName' 	=> 	'required',
+					'name' 	=> 	'required',
 					'email'		=> 	'required|email|unique:users',
 					'password'	=>	'required|min:8'
 			)
@@ -85,15 +85,15 @@ class UsersController extends BaseController {
 		}
 
 		$user 				=	new User;
-		$user->full_name 	=	$fullName;
+		$user->name 	=	$name;
 		$user->email 		=	$email;
 		$user->password 	=	Hash::make($password);
 
 		$user->save();	
 
 		if ( Auth::attempt(array('email' => $email, 'password' => $password)) ) {
-			Helpers::sendWelcomeMail();
-			return Redirect::to('hud');
+		//	Helpers::sendWelcomeMail();
+			return Redirect::to('jsdashboard');
 		}
 
 		return Redirect::back()->withErrors($validator);

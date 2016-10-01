@@ -87,11 +87,11 @@ button {
                 <div class="col-md-3"></div>
                 <div class="col-md-6" id="login-form">
                     {!! Form::open(array('action' => 'UsersController@register')) !!}
-            <div class="form-group  {{ $errors->has('fullName') ? 'has-error' : '' }}">
-                {!! Form::label('fullName', trans('site/user.fullName'), array('class' => 'control-label')) !!}
+            <div class="form-group  {{ $errors->has('name') ? 'has-error' : '' }}">
+                {!! Form::label('name', trans('site/user.name'), array('class' => 'control-label')) !!}
                 <div class="controls">
-                    {!! Form::text('fullName', null, array('class' => 'form-control')) !!}
-                    <span class="help-block">{{ $errors->first('fullName', ':message') }}</span>
+                    {!! Form::text('name', null, array('class' => 'form-control')) !!}
+                    <span class="help-block">{{ $errors->first('name', ':message') }}</span>
                 </div>
             </div>
             
@@ -186,16 +186,16 @@ button {
                 Job Seeker Sign Up Form
             </h2>
             <form action="{{ URL::to('jsprofile') }}" method="get">
-                <label>*First fullName: </label><br/>
-                <input class="form-control" type="text" fullName="First-fullName" placeholder="First fullName"  required><br/><br/>
-                <label>*Last fullName: </label><br/>
-                <input class="form-control" type="text" fullName="Last-fullName" placeholder="Last fullName" required><br/><br/>
+                <label>*First name: </label><br/>
+                <input class="form-control" type="text" name="First-name" placeholder="First name"  required><br/><br/>
+                <label>*Last name: </label><br/>
+                <input class="form-control" type="text" name="Last-name" placeholder="Last name" required><br/><br/>
                 <label>*Password: </label><br/>
-                <input class="form-control" type="password" fullName="Password" placeholder="Password" required><br/><br/>
+                <input class="form-control" type="password" name="Password" placeholder="Password" required><br/><br/>
                 <label>*Re-Type Password: </label><br/>
-                <input class="form-control" type="password" fullName="Re-Type Password" placeholder="Re-Type Password" required><br/><br/>
+                <input class="form-control" type="password" name="Re-Type Password" placeholder="Re-Type Password" required><br/><br/>
                 <label>*E-Mail: </label><br/>
-                <input class="form-control" type="email" fullName="E-Mail" placeholder="Enter E-Mail" required><br/><br/>
+                <input class="form-control" type="email" name="E-Mail" placeholder="Enter E-Mail" required><br/><br/>
                 <input type="submit" value="Submit" id="b1">
             </form>
         </div>
