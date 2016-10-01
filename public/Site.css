@@ -1,0 +1,130 @@
+body
+{
+background-color: rgb(100,200,240);
+}
+#header
+{
+//	position: fixed;
+//background-color: rgb(100,200,240);
+background-image: url("img/bg/bg.jpg");
+}
+.container-fluid
+{
+//background-image: url("img/bg/bg.jpg");
+}
+#logo
+{
+	margin-left: 5%;
+	width: 30%;
+	height: 30%;
+}
+#nav-reg1
+{
+	margin-left: 20%;
+	margin-top: 4%;
+}
+#nav-reg12 a:hover
+{
+	background-color: LightCyan;
+	border-radius: 20%;
+}
+#main-nav-ul #main-nav-li #ul-123
+{
+	display: none;
+}
+
+#main-nav-ul #main-nav-li:hover #ul-123
+{
+	display: block;
+}
+#main-nav-ul #main-nav-li:hover
+{
+	text-align: center;
+}
+#main-nav-ul #main-nav-li #ul-123 #li-456
+{
+        display: block;
+}
+#main-nav-ul #main-nav-li #ul-123 #li-456
+{
+	padding: 1%;
+}
+
+#search-h1
+{
+	color: rgba(155,180,240,60);
+	font-family: cursive;
+}
+#top-link
+{
+	float: right;
+	margin-top: 30%;
+}
+#top-link-img
+{
+	background-color: lightblue;
+}
+#foo
+{
+//background-image: url("img/bg/bg3.jpg");
+	background-color: Lavender;
+//	background-color: DarkSlateGray;
+}
+#foo-head
+{
+	color: DarkCyan;
+//	color: BurlyWood;
+}
+#footer
+{
+//	margin-top: 5%;
+}
+#form-row
+{
+	margin-top: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+#ul1 #ul2
+{
+	display: none;
+}
+#ul1 #main
+{
+	display: inline-block;
+	position: relative;
+	border: solid 1px;
+}
+#ul1 #main #ul2 #li1 a
+{
+	display: block;
+	padding: 5px;
+	border: solid 1px;
+//	background: #000;
+//	color: white;
+}
+#ul1 #main:hover #ul2
+{
+	display: inline-block;
+}
+ul li ul
+{
+	margin-left: -50%;
+	position: absolute;
+	list-style: none;
+	width: 150px;
+}
+*/
+
+

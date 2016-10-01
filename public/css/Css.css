@@ -1,0 +1,178 @@
+body
+{
+//    background-color: #a5ffc0;
+}
+
+.container-fluid
+{
+//    background-color: antiquewhite;
+}
+
+a
+{
+    color: black;
+}
+
+#jc1
+{
+    margin-left: 20%;
+}
+#footer-img
+{
+    margin: 1%;
+    box-shadow: 5px 6px 5px black;
+    border-radius: 10%;
+}
+
+
+form>input
+{
+    border: groove antiquewhite;
+    box-shadow: 2px 4px 3px black;
+    width: 50%;
+//    border-radius: 10%;
+}
+#b1
+{
+    font-weight: bolder;
+    color: aquamarine;
+    background-color: #286090;
+}
+
+
+
+
+
+.box {
+    width: 75%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+
+}
+
+.button {
+    font-size: 1em;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.button:hover
+{
+    background: #c7254e;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #c7254e;
+    font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close:hover
+{
+    color: #c9302c;
+    font-size: 45px;
+}
+.popup .content
+{
+    color: #c7254e;
+    max-height: 30%;
+    overflow: auto;
+}
+#SIDE-MEDIAS1
+{
+    margin-left: -1.5%;
+    margin-top: 10%;
+}
+#SIDE-MEDIAS2
+{
+    margin-left: -1.5%;
+}
+#SIDE-MEDIAS3
+{
+    margin-left: -1.5%;
+}
+
+#SIDE-MEDIAS1:hover, #SIDE-MEDIAS2:hover, #SIDE-MEDIAS3:hover
+{
+    border-radius: 10%;
+    height: 45px;
+    width: 55px;
+}
+#overlay-link
+{
+    color: lightseagreen;
+    text-shadow: 10px 11px 7px black;
+}
+#overlay-link:hover
+{
+    font-size: larger;
+    font-family: curlz MT;
+    text-decoration: none;
+}
+#job-form>input
+{
+    width: 30%;
+    margin-top: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
