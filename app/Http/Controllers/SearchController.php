@@ -26,13 +26,15 @@ class SearchController extends Controller
 {
 //dd($request);
  $text = $request->input('search_text');
+ $region = $request->input('region_name');
+ 
 	//dd($text);
     // Gets the query string from our form submission 
    // $query = Request::input('search');
 
     // Returns an array of articles that have the query string located somewhere within 
     // our articles titles. Paginates them so we can break up lots of search results.
-    $articles = DB::table('jusers')->join('pinfos', 'jusers.id', '=', 'pinfos.pinfoes_id')
+    $articles = DB::table('users')->join('pinfos', 'users.id', '=', 'pinfos.pinfoes_id')
                                    ->join('einfos', 'pinfos.id', '=', 'einfos.einfoes_id')
                                    ->join('jinfos', 'pinfos.id', '=', 'jinfos.jinfoes_id')
                                    ->join('rpinfos', 'pinfos.id', '=', 'rpinfos.rpinfoes_id')
@@ -42,9 +44,8 @@ class SearchController extends Controller
                                    ->join('cinfos', 'pinfos.id', '=', 'cinfos.cinfoes_id')
                                    ->join('skinfos', 'pinfos.id', '=', 'skinfos.skinfoes_id')
                                    ->join('lang_infos', 'pinfos.id', '=', 'lang_infos.langinfoes_id')
-                                   ->where('jusers.username', 'LIKE', '%' . $text . '%')
-                                   ->orWhere('jusers.name', 'LIKE', '%' . $text . '%')
-                                   ->orWhere('jusers.email', 'LIKE', '%' . $text . '%')
+                                   ->orWhere('users.name', 'LIKE', '%' . $text . '%')
+                                   ->orWhere('users.email', 'LIKE', '%' . $text . '%')
                                    ->orWhere('pinfos.age', 'LIKE', '%' . $text . '%')
                                    ->orWhere('pinfos.phone', 'LIKE', '%' . $text . '%')
                                    ->orWhere('pinfos.address', 'LIKE', '%' . $text . '%')
@@ -78,10 +79,10 @@ class SearchController extends Controller
                                    ->orWhere('cinfos.c_year', 'LIKE', '%' . $text . '%')
                                    ->orWhere('skinfos.name', 'LIKE', '%' . $text . '%')
                                    ->orWhere('lang_infos.name', 'LIKE', '%' . $text . '%')->paginate(10);
-                                  // ->orWhere('jusers.username', 'LIKE', '%' . $text . '%')->paginate(10);
+                                  // ->orWhere('users.username', 'LIKE', '%' . $text . '%')->paginate(10);
                                    
        // dd($articles);
     // returns a view and passes the view the list of articles and the original query.
-    return view('Design.search',compact('articles','text'));
+    return view('Design.search',compact('articles','text','region'));
  }
 }

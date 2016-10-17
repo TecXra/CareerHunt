@@ -25,13 +25,17 @@ class User extends Model implements AuthenticatableContract,
     protected $hidden = ['password', 'remember_token'];
 
 
-    public function EUser()
+   
+
+    public function userCompinfo()
     {
-        return $this->hasOne('App\Euser');
+        return $this->hasOne('App\Compinfo');
     }
 
-     public function JUser()
+     public function userPinfo()
     {
-        return $this->hasOne('App\Juser');
+        return $this->hasOne('App\Pinfo');
     }
+
+    
 }

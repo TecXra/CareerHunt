@@ -11,10 +11,11 @@ class Awinfo extends Model
 
            'a_name',
             'a_year',
-            'a_institute'
+            'a_institute',
+            'awinfoes_id'
     ];
-    public function Juser()
+    public function awinfoPinfo()
     {
-        return $this->belongsTo('App\Juser');
+        return $this->belongsTo('App\User');
     }
 }

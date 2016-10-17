@@ -88,6 +88,14 @@ button {
                 <div class="col-md-3"></div>
                 <div class="col-md-6" id="login-form">
                 {!! Form::open(array('action' => 'UsersController@login')) !!}
+
+                <div class="form-group  {{ $errors->has('status') ? 'has-error' : '' }}">
+               
+                <div class="controls">
+                    {!! Form::hidden('status', 'e', array('class' => 'form-control')) !!}
+                    <span class="help-block">{{ $errors->first('status', ':message') }}</span>
+                </div>
+            </div>
                     
             <div class="form-group  {{ $errors->has('email') ? 'has-error' : '' }}">
                 {!! Form::label('email', "E-Mail Address", array('class' => 'control-label')) !!}

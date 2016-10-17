@@ -11,12 +11,13 @@ class Vrinfo extends Model
 
             'org',
             'post',
-            'v_duration'
+            'v_duration',
+            'vrinfoes_id'
 
     ];
      
-     public function Vrinfo_Juser()
+     public function vrinfoPinfo()
     {
-        return $this->belongsTo('App\Juser');
+        return $this->belongsTo('App\User');
     }
 }

@@ -14,10 +14,11 @@ class Einfo extends Model
             'institute',
             'per_age',
             'e_duration',
+            'einfoes_id'
 
     ];
-    public function Einfo_Juser()
+    public function einfoUser()
     {
-        return $this->belongsTo('App\Juser');
+        return $this->belongsTo('App\User');
     }
 }

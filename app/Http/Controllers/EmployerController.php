@@ -87,8 +87,8 @@ public function jobstore(Requests\PostRequest $request){
     public function emprofile($id)
     {
 
-    $Euser=Euser::find($id);
-    return view('Design.emprofile',compact('Euser'));
+    $user=User::find($id);
+    return view('Design.emprofile',compact('user'));
     }
 
 

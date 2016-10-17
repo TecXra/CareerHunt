@@ -8,13 +8,13 @@ class Skinfo extends Model
 {
 	protected $fillable = [
 
-
+          'skinfoes_id',
              'name'
 
     ];
    
-   public function Skinfo_Juser()
+   public function skinfoPinfo()
     {
-        return $this->belongsTo('App\Juser');
+        return $this->belongsTo('App\User');
     }
 }

@@ -11,11 +11,12 @@ class Cinfo extends Model
 
             'c_name',
             'c_year',
-            'c_institute'
+            'c_institute',
+            'cinfoes_id'
 
     ];
-    public function Cinfo_Juser()
+    public function cinfoPinfo()
     {
-        return $this->belongsTo('App\Juser');
+        return $this->belongsTo('App\User');
     }
 }

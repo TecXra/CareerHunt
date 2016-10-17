@@ -41,9 +41,8 @@ return [
     |
     */
 
-    'table' => 'eusers',
-    'table' => 'jusers',
-
+    'table' => 'users'
+,
     /*
     |--------------------------------------------------------------------------
     | Password Reset Settings

@@ -10,11 +10,12 @@ class Seinfo extends Model
 
 
             's_topic',
-      's_institute'
+      's_institute',
+      'seinfoes_id'
 
     ];
-     public function Seinfo_Juser()
+     public function seinfoPinfo()
     {
-        return $this->belongsTo('App\Juser');
+        return $this->belongsTo('App\User');
     }
 }

@@ -135,7 +135,7 @@ xpublic  function showjobseeker($id){
   
        $Pinfos=Pinfo::find($id);
         //dd($Post->created_at->diffForHumans());
-        return view('Design.showjobseeker',compact('Pinfos'));
+        return view('Design.jsinfo',compact('Pinfos'));
     }  
 
 public function storejobseeker(Requests\PinfoRequest $request){
