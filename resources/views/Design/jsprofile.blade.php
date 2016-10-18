@@ -1,4 +1,11 @@
 @extends('layouts.app')
+
+
+
+
+
+@section('styles')
+
 <style type="text/css">
     #js1
     {
@@ -21,7 +28,14 @@
     
 
 </style>
-@include('partials.logout-header')
+
+@endsection
+
+
+
+
+@section('content')
+
 <div class="container-fluid" style="margin-bottom: 1%;">
     <div class="row text-center">
         <h2 style="margin-bottom: -1%;"><i>Job Seeker Profile</i></h2>
@@ -235,6 +249,10 @@
         <div class="col-lg-4"></div>
     </div>
 </div>
+
+@endsection
+
+
 
 
 
