@@ -12,7 +12,7 @@ class CreateUserInfo extends Migration
      */
     public function up()
     {
-      Schema::create('jusers', function (Blueprint $table) {
+      Schema::create('jpinfos', function (Blueprint $table) {
            
             $table->increments('id');
             $table->unsignedInteger('user_id')->nullable();
@@ -41,7 +41,7 @@ class CreateUserInfo extends Migration
             $table->timestamps();
             $table->foreign('pinfoes_id')
                 ->references('id')
-                ->on('jusers')
+                ->on('users')
                 ->onDelete('set null');
 
         });
@@ -53,11 +53,11 @@ class CreateUserInfo extends Migration
             $table->string('major_subjects');
             $table->string('institute');
             $table->string('per_age');
-            $table->integer('e_duration');
+            $table->string('e_duration');
             $table->timestamps();
              $table->foreign('einfoes_id')
                 ->references('id')
-                ->on('jusers')
+                ->on('pinfos')
                 ->onDelete('set null');
 
         });
@@ -67,12 +67,12 @@ class CreateUserInfo extends Migration
              $table->unsignedInteger('jinfoes_id')->nullable();
             $table->text('job_title');
             $table->text('job_description');
-            $table->integer('j_duration');
+            $table->string('j_duration');
             $table->text('comp_name');
             $table->timestamps();
              $table->foreign('jinfoes_id')
                 ->references('id')
-                ->on('jusers')
+                ->on('pinfos')
                 ->onDelete('set null');
 
         });
@@ -81,12 +81,12 @@ class CreateUserInfo extends Migration
             $table->unsignedInteger('rpinfoes_id')->nullable();
             $table->text('rp_title');
             $table->text('rp_description');
-            $table->integer('rp_year');
+            $table->string('rp_year');
             $table->string('p_paper');
             $table->timestamps();
             $table->foreign('rpinfoes_id')
                 ->references('id')
-                ->on('jusers')
+                ->on('pinfos')
                 ->onDelete('set null');
 
         });
@@ -96,11 +96,11 @@ class CreateUserInfo extends Migration
              $table->unsignedInteger('vrinfoes_id')->nullable();
            $table->text('org');
             $table->text('post');
-            $table->integer('v_duration');
+            $table->string('v_duration');
             $table->timestamps();
             $table->foreign('vrinfoes_id')
                 ->references('id')
-                ->on('jusers')
+                ->on('pinfos')
                 ->onDelete('set null');
         });
 
@@ -113,7 +113,7 @@ class CreateUserInfo extends Migration
             $table->timestamps();
             $table->foreign('seinfoes_id')
                 ->references('id')
-                ->on('jusers')
+                ->on('pinfos')
                 ->onDelete('set null');
             });
           Schema::create('awinfos', function (Blueprint $table) {
@@ -125,7 +125,7 @@ class CreateUserInfo extends Migration
             $table->timestamps();
             $table->foreign('awinfoes_id')
                 ->references('id')
-                ->on('jusers')
+                ->on('pinfos')
                 ->onDelete('set null');
             });
           Schema::create('cinfos', function (Blueprint $table) {
@@ -137,7 +137,7 @@ class CreateUserInfo extends Migration
             $table->timestamps();
             $table->foreign('cinfoes_id')
                 ->references('id')
-                ->on('jusers')
+                ->on('pinfos')
                 ->onDelete('set null');
             });
           Schema::create('skinfos', function (Blueprint $table) {
@@ -147,7 +147,7 @@ class CreateUserInfo extends Migration
             $table->timestamps();
             $table->foreign('skinfoes_id')
                 ->references('id')
-                ->on('jusers')
+                ->on('pinfos')
                 ->onDelete('set null');
             });
           Schema::create('lang_infos', function (Blueprint $table) {
@@ -157,7 +157,7 @@ class CreateUserInfo extends Migration
             $table->timestamps();
             $table->foreign('langinfoes_id')
                 ->references('id')
-                ->on('jusers')
+                ->on('pinfos')
                 ->onDelete('set null');
             });
     }
@@ -179,6 +179,6 @@ class CreateUserInfo extends Migration
         Schema::drop('jinfos');
         Schema::drop('einfos');
         Schema::drop('pinfos');
-        Schema::drop('jusers');
+        Schema::drop('pinfos');
     }
 }

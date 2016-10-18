@@ -140,8 +140,8 @@ Route::get('jsprofile/edustore','JobSeekerController@edustore');
 Route::get('jobshow/{id}/jobedit','EmployerController@jobedit');
 Route::get('jobshow/{id}','EmployerController@Postshow');
 
-Route::get('emdashboard/{user}','EmployerController@emdashboard');
-Route::get('emdashbord','EmployerController@emdashbord');
+Route::get('emdashboard/{id}','EmployerController@emdashboard');
+//Route::get('emdashbord','EmployerController@emdashbord');
 Route::get('jsdashboard','JobSeekerController@jsdashboard');
 Route::get('emprofile2','EmployerController@emprofile2');
 Route::resource('design','DesignController');
@@ -184,7 +184,7 @@ Route::post('resetPassword/{id}','UsersController@resetPassword');
 //});
 
 //Route::resource('users','DesignController');
-Route::group(array('before' => 'auth'), function()
+/*Route::group(array('before' => 'auth'), function()
 {
     Route::get('hud', 'HomeController@index')->name('hud');
     Route::get('search', 'HomeController@search')->name('search');
@@ -198,7 +198,7 @@ Route::group(array('before' => 'auth'), function()
 //    Route::get('projects/{id}/files', array('uses' => 'ProjectsController@files', 'as' => 'projects.files' ));
 //    Route::post('projects/{id}/files', array('uses' => 'FilesController@store', 'as' => 'files.store' ));
 //    Route::delete('projects/{id}/files', array('uses' => 'FilesController@destroy', 'as' => 'files.remove' ));
-});
+});*/
 
 
 

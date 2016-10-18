@@ -9,11 +9,12 @@ class Lang_info extends Model
     protected $fillable = [
 
 
-             'name'
+             'name',
+             'langinfoes_id'
     ];
-public function Lang_Juser()
+public function langPinfo()
     {
-        return $this->belongsTo('App\Juser');
+        return $this->belongsTo('App\User');
     }
 
 }

@@ -25,7 +25,11 @@ class UsersController extends Controller {
 
 	// Logout the user
 	public function logout(){
+
+		
+
 		Auth::logout();
+	
 		return Redirect::to('index');
 	}
 
@@ -34,25 +38,37 @@ class UsersController extends Controller {
 	{				
 		$email 		=	Input::get('email');
 		$password	=	Input::get('password');
+		$status	=	Input::get('status');
 
 		// lets validate the users input
 		$validator = Validator::make(
 			array(
 					'email' 	=>	$email,
-					'password' 	=> 	$password
+					'password' 	=> 	$password,
+					'status' 	=> 	$status
 			),
 			array(
 					'email'		=> 	'required|email',
-					'password'	=>	'required'
+					'password'	=>	'required',
+					'status' 	=> 	'required'
 			)
 		);
 
 		if ($validator->fails()){
 		    return Redirect::back()->withErrors($validator)->withInput();
 		}else{
-			if( Auth::attempt(array('email' => $email, 'password' => $password)) ){				
-				return Redirect::to('jsdashboard');
-			}else{				
+			if( Auth::attempt(array('email' => $email, 'password' => $password,'status' => 'j')) ){	
+			$jsprofile = 'jsdashboard/' . Auth::user()->id;	
+		    return Redirect::to($jsprofile);
+			
+			}
+			if( Auth::attempt(array('email' => $email, 'password' => $password,'status' => 'e')) ){
+			$emdashboard = 'emdashboard/' . Auth::user()->id ;	
+		    return Redirect::to($emdashboard);
+			
+			}
+
+			else{				
 				$validator->getMessageBag()->add('input', 'Incorrect email or password');
 				return Redirect::back()->withErrors($validator)->withInput();;
 			}			
@@ -65,18 +81,22 @@ class UsersController extends Controller {
 		$name	=	Input::get('name');
 		$email 		=	Input::get('email');
 		$password	=	Input::get('password');	
+		$status	=	Input::get('status');	
 
 		// lets validate the users input
 		$validator = Validator::make(
 			array(
 					'name' 	=> 	$name,
 					'email' 	=>	$email,
-					'password' 	=> 	$password
+					'password' 	=> 	$password,
+					'status' 	=> 	$status
 			),
 			array(
 					'name' 	=> 	'required',
 					'email'		=> 	'required|email|unique:users',
-					'password'	=>	'required|min:8'
+					'password'	=>	'required|min:8',
+					'status' 	=> 	'required'
+
 			)
 		);
 
@@ -86,14 +106,23 @@ class UsersController extends Controller {
 
 		$user 				=	new User;
 		$user->name 	=	$name;
+		$user->status   = $status;
 		$user->email 		=	$email;
 		$user->password 	=	Hash::make($password);
 
 		$user->save();	
 
-		if ( Auth::attempt(array('email' => $email, 'password' => $password)) ) {
+		if ( Auth::attempt(array('email' => $email, 'password' => $password,'status' => 'j')) ) {
 		//	Helpers::sendWelcomeMail();
-			return Redirect::to('jsdashboard');
+			 $jsprofile = 'jsprofile/' . $user->id ;	
+		    return Redirect::to($jsprofile);
+			
+		}
+		if ( Auth::attempt(array('email' => $email, 'password' => $password,'status' => 'e')) ) {
+		//	Helpers::sendWelcomeMail();
+            $emprofile = 'emprofile/' . $user->id ;				
+			return Redirect::to($emprofile);
+			
 		}
 
 		return Redirect::back()->withErrors($validator);

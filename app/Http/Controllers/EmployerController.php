@@ -87,11 +87,11 @@ public function jobstore(Requests\PostRequest $request){
     public function emprofile($id)
     {
 
-    $Euser=Euser::find($id);
-    return view('Design.emprofile',compact('Euser'));
+    $user=User::find($id);
+    return view('Design.emprofile',compact('user'));
     }
 
-
+/*
 public function emdashbord()
     {
 
@@ -99,7 +99,7 @@ public function emdashbord()
 
       return view('Design.emdashboard');
     }
-
+*/
 
      public function emdashboard($id)
     {

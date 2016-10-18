@@ -27,11 +27,11 @@ class CompInfo extends Model
 
     ];
 
-    public function Compinfo_Euser()
+    public function compinfoUser()
     {
-        return $this->belongsTo('App\Euser');
+        return $this->belongsTo('App\User');
     }
-public function Cominfo_Post()
+public function compinfoPost()
     {
         return $this->hasOne('App\Compinfo');
     }

@@ -12,12 +12,13 @@ class Rpinfo extends Model
             'rp_title',
             'rp_description',
             'rp_year',
-            'p_paper'
+            'p_paper',
+            'rpinfoes_id'
 
     ];
     
-    public function Rpinfo_Juser()
+    public function rpinfoPinfo()
     {
-        return $this->belongsTo('App\Juser');
+        return $this->belongsTo('App\User');
     }
 }

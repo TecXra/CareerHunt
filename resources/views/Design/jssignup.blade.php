@@ -87,7 +87,7 @@ button {
             <div class="row" id="login">
                 <div class="col-md-3"></div>
                 <div class="col-md-6" id="login-form">
-                    {!! Form::open(array('url' => URL::to('jstore'), 'method' => 'post', 'files'=> true)) !!}
+                    {!! Form::open(array('action' => 'UsersController@register')) !!}
             <div class="form-group  {{ $errors->has('name') ? 'has-error' : '' }}">
                 {!! Form::label('name', trans('site/user.name'), array('class' => 'control-label')) !!}
                 <div class="controls">
@@ -95,11 +95,11 @@ button {
                     <span class="help-block">{{ $errors->first('name', ':message') }}</span>
                 </div>
             </div>
-            <div class="form-group  {{ $errors->has('username') ? 'has-error' : '' }}">
-                {!! Form::label('username', 'Username', array('class' => 'control-label')) !!}
+            <div class="form-group  {{ $errors->has('status') ? 'has-error' : '' }}">
+               
                 <div class="controls">
-                    {!! Form::text('username', null, array('class' => 'form-control')) !!}
-                    <span class="help-block">{{ $errors->first('username', ':message') }}</span>
+                    {!! Form::hidden('status', 'j', array('class' => 'form-control')) !!}
+                    <span class="help-block">{{ $errors->first('email', ':message') }}</span>
                 </div>
             </div>
             <div class="form-group  {{ $errors->has('email') ? 'has-error' : '' }}">

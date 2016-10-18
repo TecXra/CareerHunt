@@ -94,7 +94,13 @@ button {
                     <span class="help-block">{{ $errors->first('name', ':message') }}</span>
                 </div>
             </div>
-            
+            <div class="form-group  {{ $errors->has('status') ? 'has-error' : '' }}">
+               
+                <div class="controls">
+                    {!! Form::hidden('status', 'e', array('class' => 'form-control')) !!}
+                    <span class="help-block">{{ $errors->first('status', ':message') }}</span>
+                </div>
+            </div>
             <div class="form-group  {{ $errors->has('email') ? 'has-error' : '' }}">
                 {!! Form::label('email', trans('site/user.e_mail'), array('class' => 'control-label')) !!}
                 <div class="controls">

@@ -12,12 +12,13 @@ class Jinfo extends Model
             'job_title',
             'job_description',
             'j_duration',
-            'comp_name'
+            'comp_name',
+            'jinfoes_id'
 
     ];
     
-    public function Jinfo_Juser()
+    public function jinfoPinfo()
     {
-        return $this->belongsTo('App\Juser');
+        return $this->belongsTo('App\User');
     }
 }

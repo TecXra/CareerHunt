@@ -14,13 +14,19 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // Add calls to Seeders here
         $this->call(UserTableSeeder::class);
-        $this->command->info('Admin User created with username admin@admin.com and password admin');
-        $this->command->info('Test User created with username user@user.com and password user');
-		$this->call(LanguageTableSeeder::class);
-		$this->call(ArticleCategoryTableSeeder::class);
-		$this->call(ArticleTableSeeder::class);
+        $this->call(CompinfoTableseeder::class);
+        $this->call(PinfoTableseeder::class);
+        $this->call(CinfoTableseeder::class);
+        $this->call(JinfoTableseeder::class);
+        $this->call(Lang_infoTableseeder::class);
+        $this->call(RpinfoTableseeder::class);
+        $this->call(SeinfoTableseeder::class);
+        $this->call(SkinfoTableseeder::class);
+        $this->call(VrinfoTableseeder::class);
+        $this->call(EinfoTableseeder::class);
+        $this->call(AwinfoTableseeder::class);
+        
 
         Model::reguard();
     }

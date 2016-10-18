@@ -15,7 +15,7 @@
             <!--Personal Information form starts here...-->
         <form action="empstore" method="post" files = "true" enctype="multipart/form-data" id="form">
             <div class="col-sm-2">
-                <input type="hidden" name="compinfos_id" value= {{$Euser->id}} />
+                <input type="hidden" name="compinfos_id" value= {{$user->id}} />
                 <h4>Upload Company Logo</h4>
                 <div class="fileupload-new thumbnail img-up">
                     <img alt="Company Logo" src="{{ asset('img/demoUpload.jpg')}}">

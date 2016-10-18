@@ -13,12 +13,12 @@ class Post extends Model
             'job_description',
             'job_duration',
             'apply_due',
-            'last_date',
+            'last_date'
             
 
     ];
 
-public function Post_Compinfo()
+public function postCompinfo()
     {
         return $this->belongsTo('App\Compinfo');
     }

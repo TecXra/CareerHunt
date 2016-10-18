@@ -32,7 +32,7 @@ class CreateEnterpriseUserInfo extends Migration
             $table->timestamps();
             $table->foreign('compinfos_id')
                 ->references('id')
-                ->on('eusers')
+                ->on('users')
                 ->onDelete('set null');
         });
     }
