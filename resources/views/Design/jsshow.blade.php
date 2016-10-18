@@ -1,2 +1,2 @@
-<a href="{{action('EmployerController@empedit',[ $Pinfos->id]) }}">Edit</a>
-<a href="{{action('EmployerController@emdashboard',[ $Pinfos->id]) }}">Dashboard</a>
+<a href="{{action('JobSeekerController@jsedit',[ $Pinfos->id]) }}">Edit</a>
+<a href="{{action('JobSeekerController@jsdashboard',[ $Pinfos->id]) }}">Dashboard</a>

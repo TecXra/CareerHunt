@@ -13,8 +13,8 @@ class Pinfo extends Model
 
 
             'image',
-            'username'
-            'email'
+            'username',
+            'email',
             'pinfoes_id',
             'age',
             'phone',
