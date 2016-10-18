@@ -1,9 +1,0 @@
-{{$Einfos->degree_title}}
-<br>
-{{$Einfos->major_subjects}}
-<br>
-{{$Einfos->institute}}
-<br>
-{{$Einfos->per_age}}
-<br>
-{{$Einfos->e_duration}}

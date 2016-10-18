@@ -102,6 +102,8 @@ Route::post('emprofile/empstore','EmployerController@store');
 
 Route::post('jsprofile/storejobseeker','JobSeekerController@storejobseeker');
 Route::get('showjobseeker/{id}','JobSeekerController@showjobseeker');
+Route::get('showjobseeker/{id}/jsedit','EmployerController@jsedit');
+Route::post('jsupdate/{id}','EmployerController@jspupdate');
 Route::post('jsprofile/rpstore','JobSeekerController@rpstore');
 
 Route::post('store2','DesignController@store2');
@@ -142,23 +144,16 @@ Route::get('jobshow/{id}','EmployerController@Postshow');
 
 Route::get('emdashboard/{id}','EmployerController@emdashboard');
 //Route::get('emdashbord','EmployerController@emdashbord');
+//Route::get('jsdashboard/{id}','JobSeekerController@jsdashboard');
 Route::get('jsdashboard','JobSeekerController@jsdashboard');
 Route::get('emprofile2','EmployerController@emprofile2');
 Route::resource('design','DesignController');
 
-        
-     Route::post('emdashboard/jobstore','EmployerController@jobstore');   
+ Route::post('emdashboard/jobstore','EmployerController@jobstore');   
         
 Route::get('search','SearchController@search');  
 
-Route::get('jseducationshow/{id}','JobSeekerController@jseducationshow');
-Route::get('jsrespubshow','JobSeekerController@jsrespubshow');
-Route::get('jscertificateshow','JobSeekerController@jscertificateshow');
-Route::get('jsjobshow','JobSeekerController@jsjobshow');
-Route::get('jsseminarshow','JobSeekerController@jsseminarshow');
-Route::get('jsawardshow','JobSeekerController@jsawardshow');
-Route::get('jsvolunteershow','JobSeekerController@jsvolunteershow');
-Route::get('jsotherinfoshow','JobSeekerController@jsotherinfoshow');
+
 
 Route::get('emplogin','EmployerController@emplogin');
 Route::get('jslogin','JobSeekerController@jslogin');
@@ -198,6 +193,8 @@ Route::post('resetPassword/{id}','UsersController@resetPassword');
 });*/
 
 
+
+// job seeker routes
 
 
 

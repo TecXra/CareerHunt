@@ -162,6 +162,8 @@ public function estore(Requests\EuserRequest $request){
       
       // $user->profile->save($request);
 
+        $pinfoes = Pinfo :: Create($request->all());
+        $pinfoes->save();
         $Compinfoes = Compinfo :: Create($request->all());
         $Compinfoes->save();
 

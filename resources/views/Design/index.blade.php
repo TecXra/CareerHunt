@@ -1121,17 +1121,17 @@ $(function(){
         <hr/>
  
     <div class="row" style="margin-left:3%;">
-        @foreach($Posts as $Post)
+        @foreach($Pinfos as $Pinfo)
         <label>Job Title: </label>
-        {{$Post->job_title}}<br/>
+        {{$Pinfo->job_title}}<br/>
         <label>Job Description</label>
-        {{$Post->job_description}}<br/>
+        {{$Pinfo->job_description}}<br/>
         <label>Job Duration</label>
-        {{$Post->job_duration}}<br/>
+        {{$Pinfo->job_duration}}<br/>
         <label>Apply Due: </label>
-        {{$Post->apply_due}}<br/>
+        {{$Pinfo->apply_due}}<br/>
         <label>Last Date: </label>
-        {{$Post->last_date}}<br/><br/><br/>
+        {{$Pinfo->last_date}}<br/><br/><br/>
 
         @endforeach
     </div>

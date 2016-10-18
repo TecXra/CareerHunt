@@ -24,7 +24,7 @@ class PinfoRequest extends Request
     public function rules()
     {
         return [
-            'image' => 'required'
+            
         ];
     }
 }

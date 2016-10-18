@@ -114,13 +114,13 @@ class UsersController extends Controller {
 
 		if ( Auth::attempt(array('email' => $email, 'password' => $password,'status' => 'j')) ) {
 		//	Helpers::sendWelcomeMail();
-			 $jsprofile = 'jsprofile/' . $user->id ;	
+			 $jsprofile = 'jsprofile/' . Auth::user()->id ;	
 		    return Redirect::to($jsprofile);
 			
 		}
 		if ( Auth::attempt(array('email' => $email, 'password' => $password,'status' => 'e')) ) {
 		//	Helpers::sendWelcomeMail();
-            $emprofile = 'emprofile/' . $user->id ;				
+            $emprofile = 'emprofile/' . Auth::user()->id ;				
 			return Redirect::to($emprofile);
 			
 		}
