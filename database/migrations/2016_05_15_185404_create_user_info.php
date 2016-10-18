@@ -50,6 +50,8 @@ class CreateUserInfo extends Migration
             $table->string('Skill1');
             $table->string('Skill2');
             $table->string('Skill3');
+            //experience
+            $table->string('Skill3');
             //about you
             $table->string('about_you');
 
