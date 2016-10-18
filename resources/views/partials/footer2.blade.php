@@ -1,4 +1,3 @@
-@extends('layouts.app')
 <div class="container-fluid">
     <!--Color Divide Row Starts Here-->
     <div class="row">

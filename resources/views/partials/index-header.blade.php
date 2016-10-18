@@ -1,4 +1,3 @@
-@extends('layouts.app')
 <!--Header Starts Here-->
 <div class="container-fluid" id="header">
     <div class="row">
@@ -8,11 +7,11 @@
 
         <div class="col-lg-6" id="reg-col">
             <ul id="nav-reg1" class="nav navbar-nav">
-                    <li id="nav-reg12"><a href="{{ URL::to('jssignup')}}">Register Job Seeker</a></li>
-                    <li id="nav-reg12"><a href="{{ URL::to('emsignup')}}">Register Employer</a> </li>
-                    <li id="nav-reg12"><a href="{{ URL::to('jslogin')}}">Login as Job Seeker</a> </li>
-                    <li id="nav-reg12"><a href="{{ URL::to('emplogin')}}">Login as Employer</a> </li>
-                </ul>
+                <li id="nav-reg12"><a href="{{ URL::to('jssignup')}}">Register Job Seeker</a></li>
+                <li id="nav-reg12"><a href="{{ URL::to('emsignup')}}">Register Employer</a> </li>
+                <li id="nav-reg12"><a href="{{ URL::to('jslogin')}}">Login as Job Seeker</a> </li>
+                <li id="nav-reg12"><a href="{{ URL::to('emplogin')}}">Login as Employer</a> </li>
+            </ul>
         </div>
     </div>
 </div>

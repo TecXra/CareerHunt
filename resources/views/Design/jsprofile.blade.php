@@ -11,12 +11,12 @@
     #js1:hover,#js2:hover,#js3:hover,#js4:hover
     {
         box-shadow: 5px 5px 5px black;
-//        transform: rotate(360deg);
+/*        transform: rotate(360deg);*/
     }
     #js5:hover,#js6:hover,#js7:hover
     {
         box-shadow: 5px 5px 5px black;
-//        transform: rotateX(360deg);
+/*        transform: rotateX(360deg);*/
     }
     
 
