@@ -33,7 +33,7 @@ class CompinfoTableseeder extends Seeder
         		'ownership_type'   => $faker->Text(10),
         		'number_of_employer'   => $faker->randomNumber  ,
         		'since'   => $faker->year($max = 'now'),
-        		'company_logo'   => $faker->image($dir = 'E:\xampp files\htdocs\careerhunt\public\image','cats' , false),
+        		'company_logo'   => $faker->text(10),
         		'number_of_branches'   => $faker->randomNumber,
         		'comp_website'   => $faker->Text(10),
         		'phone'   => $faker->phoneNumber,

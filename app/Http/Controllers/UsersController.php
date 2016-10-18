@@ -58,10 +58,14 @@ class UsersController extends Controller {
 		    return Redirect::back()->withErrors($validator)->withInput();
 		}else{
 			if( Auth::attempt(array('email' => $email, 'password' => $password,'status' => 'j')) ){	
-			return Redirect::to('jsdashboard');
+			$jsprofile = 'jsdashboard/' . Auth::user()->id;	
+		    return Redirect::to($jsprofile);
+			
 			}
 			if( Auth::attempt(array('email' => $email, 'password' => $password,'status' => 'e')) ){
-			return Redirect::to('emdashbord');
+			$emdashboard = 'emdashboard/' . Auth::user()->id ;	
+		    return Redirect::to($emdashboard);
+			
 			}
 
 			else{				

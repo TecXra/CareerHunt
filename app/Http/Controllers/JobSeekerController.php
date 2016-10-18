@@ -66,7 +66,7 @@ class JobSeekerController extends Controller
 
 	public function jsprofile($id)
 	{
-    $Juser=Juser::find($id);
+    $Juser=User::find($id);
     return view('Design.jsprofile',compact('Juser'));
 	}
 

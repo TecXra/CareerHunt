@@ -140,8 +140,8 @@ Route::get('jsprofile/edustore','JobSeekerController@edustore');
 Route::get('jobshow/{id}/jobedit','EmployerController@jobedit');
 Route::get('jobshow/{id}','EmployerController@Postshow');
 
-Route::get('emdashboard/{user}','EmployerController@emdashboard');
-Route::get('emdashbord','EmployerController@emdashbord');
+Route::get('emdashboard/{id}','EmployerController@emdashboard');
+//Route::get('emdashbord','EmployerController@emdashbord');
 Route::get('jsdashboard','JobSeekerController@jsdashboard');
 Route::get('emprofile2','EmployerController@emprofile2');
 Route::resource('design','DesignController');

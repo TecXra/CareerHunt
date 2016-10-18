@@ -22,7 +22,7 @@ class PinfoTableseeder extends Seeder
         	Pinfo::create([
 
         		'pinfoes_id' => $user_id,
-        		'image'   => $faker->image($dir = 'E:\xampp files\htdocs\careerhunt\public\image','cats' , false),
+        		'image'   => $faker->text(10),
         		'martial_status'   => $faker->Text(10),
         		'address'   => $faker->address,
         		'town'   => $faker->Text(10),

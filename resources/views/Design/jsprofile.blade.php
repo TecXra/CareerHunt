@@ -27,50 +27,38 @@
         <h2 style="margin-bottom: -1%;"><i>Job Seeker Profile</i></h2>
     </div>    
 <hr/>
+
+
     <form action="storejobseeker" method="post" files="true">
-        <div class="row" id="p-info">
+        
             <div class="col-sm-2">
-                <h4>Upload Profile Picture</h4>
-                <div class="fileupload-new thumbnail img-up">
-                    <img alt="Profile Picture" src="{{ asset('img/demoUpload.jpg')}}"/>
-                </div>
+                
                 <input type="file" class="form-control">
             </div>
-            <div class="col-lg-10">
-                <div class="row" id="form-row" style="margin-top: 4%;">
-                    <div class="col-md-6">
+            
                             <div class="input-group">
                                 <div class="input-group-addon">Date-Of-Birth * </div>
                                 <input type="date" id="datepicker" class="form-control" placeholder="DD/MM/YYYY">
                             </div>
-                    </div>
-
-                    <div class="col-md-6">
+                   
                             <div class="input-group">
                                 <div class="input-group-addon">Phone * </div>
                                 <div class="input-group-addon">+92</div>
                                 <input type="number" class="form-control" placeholder="XXX-XXXXXXX">
                             </div>
-                    </div>
-                </div>
-                <div class="row" id="form-row">
-                    <div class="col-md-6">
+                
                             <div class="input-group">
                                 <div class="input-group-addon">Address</div>
                                 <input type="text" class="form-control" placeholder="House #..St..">
                             </div>
-                    </div>
-                    <div class="col-md-6 form-inline">
+                    
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Town">
                             </div>
                             <div class="input-group" style="margin-left: 6%;">
                                 <input type="text" class="form-control" placeholder="City">
                             </div>
-                    </div>
-                </div>
-                <div class="row" id="form-row">
-                    <div class="col-md-12 form-inline">
+               
                             <div class="input-group">
                                 <div class="input-group-addon">Nationality</div>
                                 <input type="text" class="form-control" placeholder="Pakistani">
@@ -83,15 +71,12 @@
                                 <div class="input-group-addon">Religion</div>
                                 <input type="text" class="form-control" placeholder="Religion">
                             </div>
-                    </div>
-                </div>
-                <div class="row text-center" id="form-row">
-                               
-                </div>
-            </div>
+                    
+                
+                
+        
             <input type="submit" value="submit">
-        </div>
-    </form>
+           </form>
             
 
 <!--Color Divide Row Starts Here-->

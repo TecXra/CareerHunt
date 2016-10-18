@@ -21,6 +21,7 @@
             <ul id="nav-reg1" class="nav navbar-nav">
                     <li id="nav-reg12"><a href="{{ URL::to('index2')}}">Homepage</a></li>
                   <!--  <li id="nav-reg12"><a href="{{action('EmployerController@empedit',[ ]) }}">Edit Profile</a> </li>-->
+                  <a href="{{action('EmployerController@empedit',[ $Compinfo->id]) }}">Edit</a>
                     <li id="nav-reg12"><a href="" data-toggle="modal" data-target="#jobpost" id="asw">Post Job</a></li>
                     <li id="nav-reg12"><a href="{{ URL::to('index')}}">Log Out</a></li>
                 </ul>

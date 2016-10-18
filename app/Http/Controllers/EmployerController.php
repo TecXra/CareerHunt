@@ -91,7 +91,7 @@ public function jobstore(Requests\PostRequest $request){
     return view('Design.emprofile',compact('user'));
     }
 
-
+/*
 public function emdashbord()
     {
 
@@ -99,7 +99,7 @@ public function emdashbord()
 
       return view('Design.emdashboard');
     }
-
+*/
 
      public function emdashboard($id)
     {
