@@ -145,7 +145,7 @@ Route::get('jobshow/{id}','EmployerController@Postshow');
 Route::get('emdashboard/{id}','EmployerController@emdashboard');
 //Route::get('emdashbord','EmployerController@emdashbord');
 //Route::get('jsdashboard/{id}','JobSeekerController@jsdashboard');
-Route::get('jsdashboard','JobSeekerController@jsdashboard');
+Route::get('jsdashboard/{id}','JobSeekerController@jsdashboard');
 Route::get('emprofile2','EmployerController@emprofile2');
 Route::resource('design','DesignController');
 
