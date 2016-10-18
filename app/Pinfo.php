@@ -46,6 +46,8 @@ class Pinfo extends Model
             'Skill1',
             'Skill2',
             'Skill3',
+            //experience
+            'exp',
             'about_you'
 
     ] ;
