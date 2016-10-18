@@ -90,8 +90,8 @@
                                 <span class="help-block">{{ $errors->first('name', ':message') }}</span>
                             </div>
                         </div>
-                        <div class="form-group  {{ $errors->has('status') ? 'has-error' : '' }}">
-                           
+                        
+                        <div class="form-group  {{ $errors->has('status') ? 'has-error' : '' }}">                           
                             <div class="controls">
                                 {!! Form::hidden('status', 'j', array('class' => 'form-control')) !!}
                                 <span class="help-block">{{ $errors->first('email', ':message') }}</span>

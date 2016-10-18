@@ -41,7 +41,7 @@
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">Company Slogan</div>
-                                <input type="text" class="form-control" name="slogan" placeholder="Asdfghjkl">
+                                <input type="text" class="form-control" name="slogan" placeholder="Company Slogan">
                             </div>
                         </div>
                         <div class="col-md-6">
