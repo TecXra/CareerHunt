@@ -1,3 +1,3 @@
 @extends('layouts.app')
 job seeker dashboard
-<a href="{{action('EmployerController@empedit',[ $Pinfos->id]) }}">Edit</a>
+<a href="{{action('JobSeekerController@jsedit',[ $Pinfos->id]) }}">Edit</a>

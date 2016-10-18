@@ -67,7 +67,7 @@ public function jsdashboard($id)
 
        $Pinfos=Pinfo::find($id);
 
-      return view('Design.emdashboard',compact('Pinfos'));
+      return view('Design.jsdashboard',compact('Pinfos'));
     }
 
 	public function jsprofile($id)
