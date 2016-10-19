@@ -14,10 +14,10 @@ class CreateUserInfo extends Migration
     {
       
         Schema::create('pinfos', function (Blueprint $table) {
-             $table->increments('id');
-             $table->unsignedInteger('pinfoes_id')->nullable();
-             $table->string('username');
-             $table->string('email');
+            $table->increments('id');
+            $table->unsignedInteger('pinfoes_id')->nullable();
+            $table->string('username');
+            $table->string('email');
             $table->string('image');
             $table->date('age');
             $table->integer('phone');

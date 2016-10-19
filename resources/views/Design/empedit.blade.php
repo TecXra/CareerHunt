@@ -1,23 +1,19 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 
 
 @section('content')
 <div class="container-fluid">
     <div class="row">
-{{ Auth::user()->name }}
+            {!! Form::model($Compinfoes, array('url' => URL::to('empupdate') . '/' . $Compinfoes->id, 'method' => 'post')) !!}
+
         <div class="row text-center">
             <h3>Update Your Company Detail</h3>
         </div>
         <div class="row">
-            {!! Form::model($Compinfoes, array('url' => URL::to('empupdate') . '/' . $Compinfoes->id, 'method' => 'post')) !!}
-            <div class="col-lg-2">
-                <h4>Company Logo</h4>
-                <div class="fileupload-new thumbnail img-up">
-                    <img alt="Company Logo" src="{{ asset('img/person-flat.png') }}">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label class="form-control text-center">Change Company Logo (If Changed) -->></label>
                 </div>
-                <input type="file" name="company_logo" class="form-control">
-            </div>
-            <div class="col-lg-5">
                 <div class="form-group">
                     {!! Form::label('Company Head Name') !!}
                     {!! Form::text('comp_head_name',null,['class'=>'form-control']) !!}
@@ -43,7 +39,12 @@
                     {!! Form::text('city',null,['class'=>'form-control']) !!}
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-6">
+            <div class="form-group">
+                                <input type="file" name="company_logo" class="form-control">
+ 
+            </div>
+
                 <div class="form-group">
                     {!! Form::label('Industry') !!}
                     {!! Form::select('industry_type', 
@@ -110,16 +111,14 @@
                     {!! Form::number('phone',null,['class'=>'form-control','placeholder'=> 'Enter Phone Number']) !!}
                 </div>
             </div>
-            <div class="col-lg-2">
-                
-            </div>
-            <div class="col-lg-5">
+
+            <div class="col-lg-6">
                 <div class="form-group">
                     {!! Form::submit('Update',['class' => 'btn btn-primary form-control']) !!}
                 </div>
                 {!! Form::close() !!}
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-6">
                 <div class="form-group">
                     <a href="{{action('EmployerController@emdashboard',[ $Compinfoes->id]) }}" class="btn btn-info form-control">Dashboard</a>
                 </div>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 
 @section('styles')
@@ -17,16 +17,16 @@
 <br/>
 
 <a href="Design/{{ $Compinfo->id }}"><img src="{{ asset($Compinfo->company_logo) }}" style="width:200px; height:150px;" /></a><br/>
-      <a href="" data-toggle="modal" data-target="#jobpost" id="asw">Post Job</a>
-
+<!--       <a href="" data-toggle="modal" data-target="#jobpost" id="asw">Post Job</a>
+ -->
     <div class="row" id="asd2"></div>
     <div class="row" id="asd3"></div>
   </div>
 </div>
 
 
-{{ Auth::user()->name }}
-
+<!-- {{ Auth::user()->name }}
+ -->
 
 
 

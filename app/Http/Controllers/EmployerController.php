@@ -196,9 +196,11 @@ $show = 'show/' . $Compinfoes->id ;
 
     public function index2()
     {
-$Pinfos = Pinfo::take(3)->orderBy('created_at','asc');
-      
-      return view('Design.index2',compact('Pinfos'));
+      $Pinfos = Pinfo::take(3)->orderBy('created_at','asc');
+
+      $Compinfo = Auth::user();
+
+      return view('Design.index2',compact('Pinfos','Compinfo'));
     }
 
   public function emplogin()

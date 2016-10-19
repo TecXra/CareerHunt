@@ -53,10 +53,12 @@ class JobSeekerController extends Controller
 
    
     public function index3()
-
     {
       $Pinfos = Pinfo::take(3)->orderBy('created_at','asc');
-      return view('Design.index3',compact('Pinfos'));
+
+            $jsinfos = Auth::user();
+
+      return view('Design.index3',compact('Pinfos','jsinfos'));
     }
 
    /* public function jsdashboard()
