@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 <!--Header Starts Here-->
 <div class="container-fluid" id="header">
     <div class="row">
@@ -9,14 +10,12 @@
         <div class="col-lg-6" id="reg-col">
             <ul id="nav-reg1" class="nav navbar-nav">
                     <li id="nav-reg12"><a href="{{ URL::to('index2')}}">Home</a></li>
-<!--
-                    <li id="nav-reg12"><a href="{{ URL::to('jsprofile')}}">Goto Profile</a></li>
--->
                     <a href="{{ route('logout') }}"><i class="icon ion-android-exit"></i> Logout</a>                </ul>
         </div>
     </div>
 </div>
 <!--Header Ends Here-->
+
 <!--Color Divide Row Starts Here-->
 <div class="container-fluid">
     <div class="row">

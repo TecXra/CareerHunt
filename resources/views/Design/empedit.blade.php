@@ -1,15 +1,23 @@
 @extends('layouts.app')
 
+
+@section('content')
 <div class="container-fluid">
     <div class="row">
+
         <div class="row text-center">
-            <h3>Edit Your Detail</h3>
+            <h3>Update Your Company Detail</h3>
         </div>
         <div class="row">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4">
-                {!! Form::model($Compinfoes, array('url' => URL::to('empupdate') . '/' . $Compinfoes->id, 'method' => 'post')) !!}
-
+            {!! Form::model($Compinfoes, array('url' => URL::to('empupdate') . '/' . $Compinfoes->id, 'method' => 'post')) !!}
+            <div class="col-lg-2">
+                <h4>Company Logo</h4>
+                <div class="fileupload-new thumbnail img-up">
+                    <img alt="Company Logo" src="{{ asset('img/person-flat.png') }}">
+                </div>
+                <input type="file" name="company_logo" class="form-control">
+            </div>
+            <div class="col-lg-5">
                 <div class="form-group">
                     {!! Form::label('Company Head Name') !!}
                     {!! Form::text('comp_head_name',null,['class'=>'form-control']) !!}
@@ -34,7 +42,8 @@
                     {!! Form::label('City') !!}
                     {!! Form::text('city',null,['class'=>'form-control']) !!}
                 </div>
-
+            </div>
+            <div class="col-lg-5">
                 <div class="form-group">
                     {!! Form::label('Industry') !!}
                     {!! Form::select('industry_type', 
@@ -54,9 +63,8 @@
                             'Woolen and Worsted Textile Industry' => 'Woolen and Worsted Textile Industry',
                             'Cigarette Industry' => 'Cigarette Industry'
                         ],
-                    null, ['class' => 'form-control']); !!}
+                    null, ['class' => 'form-control','placeholder'=> 'Select Industry Type' ]); !!}
                 </div>
-
                 <div class="form-group">
                     {!! Form::label('Employees Count') !!}
                     {!! Form::select('number_of_employer', 
@@ -69,9 +77,8 @@
                             '301-500' => '301-500',
                             'More than 500' => 'More than 500'
                         ],
-                    null, ['class' => 'form-control']); !!}
+                    null, ['class' => 'form-control','placeholder'=> 'Select Number of Employers']); !!}
                 </div>
-
                 <div class="form-group">
                     {!! Form::label('Ownership Type') !!}
                     {!! Form::select('ownership_type', 
@@ -81,13 +88,12 @@
                             'Private' => 'Private',
                             'NGO' => 'NGO'
                         ],
-                    null, ['class' => 'form-control']); !!}
+                    null, ['class' => 'form-control','placeholder'=> 'Select Ownership Type']); !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('Since') !!}
-                    {!! Form::selectRange('since',1980,2016,null, ['class' => 'form-control']); !!}
+                    {!! Form::selectRange('since',1980,2016,null, ['class' => 'form-control','placeholder'=> 'Select Year of Estalished']); !!}
                 </div>
-
                 <div class="form-group">
                     {!! Form::label('Branches') !!}
                     {!! Form::select('number_of_branches', 
@@ -97,48 +103,30 @@
                                     '2-3' => '2-3',
                                     'More then 3' => 'More then 3'
                         ],
-                    null, ['class' => 'form-control']); !!}
+                    null, ['class' => 'form-control','placeholder'=> 'Select Total Number of branches']); !!}
                 </div>
-
                 <div class="form-group">
                     {!! Form::label('Phone #') !!}
-                    {!! Form::text('phone',null,['class'=>'form-control']) !!}
+                    {!! Form::number('phone',null,['class'=>'form-control','placeholder'=> 'Enter Phone Number']) !!}
                 </div>
+            </div>
+            <div class="col-lg-2">
+                
+            </div>
+            <div class="col-lg-5">
                 <div class="form-group">
                     {!! Form::submit('Update',['class' => 'btn btn-primary form-control']) !!}
                 </div>
-
                 {!! Form::close() !!}
-        </div>
-        <div class="col-lg-4"></div>
+            </div>
+            <div class="col-lg-5">
+                <div class="form-group">
+                    <a href="{{action('EmployerController@emdashboard',[ $Compinfoes->id]) }}" class="btn btn-info form-control">Dashboard</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
-<!--
-<div class="form-group">
-    {!! Form::label('due date','Published on:') !!}
-    {!! Form::input('date','apply_due',date('Y-m-d'),['class'=>'form-control']) !!}
-</div>
-<div class="form-group">
-    {!! Form::label('last date','Published on:') !!}
-    {!! Form::input('date','last_date',date('Y-m-d'),['class'=>'form-control']) !!}
-</div>
--->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@endsection

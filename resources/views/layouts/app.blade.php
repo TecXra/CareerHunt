@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Main</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
+<script type="text/javascript" src="{{ asset ('js/angular.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset ('js/angular.js')}}"></script>
+
+
 <link rel="stylesheet" type="text/css" href="{{ asset('Site.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css')}}">
 <script type="text/javascript" src="{ asset('css/'bootstrap.min.js')}}"></script>
@@ -19,63 +26,51 @@
 <script type="text/javascript" src="{{ asset('js/validate/pwstrength.js')}}"></script>
 <script type="text/javascript" src="{{ asset('js/validate/registration_validation.js')}}"></script>
 
-<body>
-@include('partials.nav')
+@yield('styles')
+<style type="text/css">
+*
+{
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url('https://fonts.gstatic.com/s/raleway/v11/yQiAaD56cjx1AooMTSghGfY6323mHUZFJMgTvxaG2iE.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
 
-<div class="container">
-@yield('content')
+</style>
+
+<body ng-app="sampleApp">
+
+<!-- <div ng-controller="myCtrl">
+  <% firstName + " " + lastName %>
 </div>
-@include('partials.footer')
+<div>
+<input type="text" ng-model="name"></input>
+<input type="text" ng-model="last_name"></input>
+  <h1>
+    <% name + " " + last_name%>
+  </h1>
+</div>
+ -->
+
+@include('partials.index-header')
+
+
+<div class="container-fluid">
+  @yield('content')
+</div>
+
+@include('partials.footer1')
 
 <!-- Scripts -->
 @yield('scripts')
 
 </body>
-<!--
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>@section('title') Article Site @show</title>
-    @section('meta_keywords')
-        <meta name="keywords" content="your, awesome, keywords, here"/>
-    @show @section('meta_author')
-        <meta name="author" content="Jon Doe"/>
-    @show @section('meta_description')
-        <meta name="description"
-              content="Lorem ipsum dolor sit amet, nihil fabulas et sea, nam posse menandri scripserit no, mei."/>
-    @show
-        <link href="{{ asset('Site.css') }}" rel="stylesheet">
-        <link href="{{ asset('style.css') }}" rel="stylesheet">
- 
-        <script src="{{ asset('js/site.js') }}"></script>
-       
-        <script src="{{ asset('js/Js.js') }}"></script><link href="{{ asset('bootstrap/bootstrap.min.css') }}" rel="stylesheet">
-        <script src="{{ asset('bootstrap/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}"></script>
-
-    @yield('styles')
-     HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]
-
-    <link rel="shortcut icon" href="{!! asset('assets/site/ico/favicon.ico')  !!} ">
--->
-</head>
-<body>
-<!--<div class="container">
-    @yield('content')
-</div>
-
-<!-- Scripts -->
-<!--@yield('scripts')-->
-@yield('content')
-
-</body>
 <script type="text/javascript">
+
+
+
+
 var requestRunning = false;
 $(document).ready(function(){
   $('#btn-get').click(function(event){  
