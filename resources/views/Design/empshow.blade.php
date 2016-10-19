@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
-{{ Auth::user()->name }}
 
 @section('content')
-
+<!-- {{ Auth::user()->name }}
+ -->
 <div class="container-fluid">
     <div class="container">
 		<h2 class="text-center"> Employer Detail </h2>

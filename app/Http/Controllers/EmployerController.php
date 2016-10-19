@@ -128,6 +128,22 @@ public function empedit($id){
     public function empupdate(Requests\PostRequest $request,$id){
         $Compinfoes=Compinfo::findOrFail($id);
         $Compinfoes->update($request->all());
+
+        if (isset($request -> image)) 
+        {
+          # code...
+
+
+         // $imageName = $Compinfoes->id . '_compinfo.' .
+        $imageName = $Pinfos->id . '_picinfo.' .
+   //     dd($imageName);
+        $request->file('image')->getClientOriginalExtension();
+        $imageCompletePath = '/image/'. $imageName ;
+        $request->file('image')->move(
+        base_path() . '/public/image/', $imageName);
+        $Pinfos->update(array('image' => $imageCompletePath));
+
+}
         $show = 'show/' . $Compinfoes->id ;
   return redirect ($show);
     }
@@ -196,9 +212,11 @@ $show = 'show/' . $Compinfoes->id ;
 
     public function index2()
     {
-$Pinfos = Pinfo::take(3)->orderBy('created_at','asc');
-      
-      return view('Design.index2',compact('Pinfos'));
+      $Pinfos = Pinfo::take(3)->orderBy('created_at','asc');
+
+      $Compinfo = Auth::user();
+
+      return view('Design.index2',compact('Pinfos','Compinfo'));
     }
 
   public function emplogin()

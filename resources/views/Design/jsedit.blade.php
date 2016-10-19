@@ -1,3 +1,11 @@
+@extends('layouts.app4')
+
+
+
+
+
+
+@section('content')
 {{ Auth::user()->name }}
 
 {!! Form::model($Pinfos, array('url' => URL::to('jsupdate') . '/' . $Pinfos->id, 'method' => 'post','files'=>true)) !!}
@@ -234,18 +242,18 @@
         </div>
         <hr/>
         <div class="row">
-	        <div class="col-lg-4">
+            <div class="col-lg-4">
 
-	        </div>
-	        <div class="col-lg-4">
-	            <textarea rows="4" cols="50" name="about_you"class="form-control">
-	                Write something about yourself in few sentencs...
-	            </textarea>
+            </div>
+            <div class="col-lg-4">
+                <textarea rows="4" cols="50" name="about_you"class="form-control">
+                    Write something about yourself in few sentencs...
+                </textarea>
 
-	        </div>
-	        <div class="col-lg-4">
+            </div>
+            <div class="col-lg-4">
 
-	        </div>
+            </div>
         </div>
         <div class="form-group">
             {!! Form::submit('Submit',['class' => 'btn btn-primary submit-btn']) !!}
@@ -254,3 +262,5 @@
 
 
 {!! Form::close() !!}
+@endsection
+

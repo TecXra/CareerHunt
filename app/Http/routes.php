@@ -141,7 +141,7 @@ Route::resource('home1','PagesController@home1');
 Route::get('index','JobSeekerController@index');
 Route::get('jsprofile/index2','EmployerController@index2');
 Route::get('index2','EmployerController@index2');
-Route::get('index3','DesignController@index3');
+Route::get('index3','JobSeekerController@index3');
 Route::get('jobpost','EmployerController@jobpost');
 
 Route::post('Postupdate/{id}','EmployerController@Postupdate');

@@ -1,5 +1,5 @@
 
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top: 1%;">
     <div class="row">
         <div class="col-sm-1" style="border-bottom: solid lightblue"></div>
         <div class="col-sm-1" style="border-bottom: solid antiquewhite"></div>

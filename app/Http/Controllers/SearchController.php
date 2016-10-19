@@ -56,11 +56,10 @@ class SearchController extends Controller
     return view('Design.search',compact('articles','text','region'));
  }
 
-public function searchauth(Request $request)
+public function searchauth(Request $requests)
 {
-//dd($request);
- $text = $request->input('search_text');
- $region = $request->input('region_name');
+ $text = $requests->input('search_text');
+ $region = $requests->input('region_name');
  
     //dd($text);
     // Gets the query string from our form submission 
