@@ -29,7 +29,7 @@
 @section('content')
 <!--Main Navigation Bar Starts Here-->
 
-    <div class="row">
+<!--     <div class="row">
         <div class="col-md-8">
             <ul class="nav navbar-nav navbar-right" id="main-nav-ul">
                 <li id="main-nav-li"><a href="{{ URL::to('index')}}">Home</a></li>
@@ -99,11 +99,11 @@
         </div>
         <div class="col-md-4"></div>
     </div>
-
+ -->
 <!--Main Navigation Bar Starts Here-->
 
 <!--Color Divide Row Starts Here-->
-    <div class="row">
+<!--     <div class="row">
         <div class="col-sm-1" style="border-top: solid lightblue"></div>
         <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
         <div class="col-sm-1" style="border-top: solid lightblue"></div>
@@ -131,7 +131,7 @@
         <div class="col-sm-1" style="border-top: solid lightblue"></div>
         <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
     </div>
-<!--Color Divide Row Ends Here-->
+ --><!--Color Divide Row Ends Here-->
 
 <!--Search Option Starts Here-->
 
@@ -589,7 +589,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1>
-                Latest Jobs
+                Available Job Seekers
             </h1>
         </div>
         <hr/>

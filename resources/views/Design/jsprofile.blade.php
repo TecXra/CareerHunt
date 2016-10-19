@@ -33,6 +33,16 @@
     {
         margin-left: 6.5%;
     }
+    .submit-btn
+    {
+        margin-top: 1%;
+        margin-left: 45%;
+        width: 10%;
+    }
+    .submit-btn:hover
+    {
+        box-shadow: 0 1px 10px rgba(0,1,1,.2);
+    }
     
 
 </style>
@@ -53,14 +63,14 @@
             <h2><i>Personal Information</i></h2>
         </div>
         <hr/>
-        <div class="row">
+        <div class="row" id="per-info">
             <div class="col-lg-6">
                 <div class="form-group">
                     {!! Form::hidden('User Name') !!}
                     {!! Form::hidden('username',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group">
-                    {!! Form::hidden('Password') !!}
+                    {!! Form::hidden('Email') !!}
                     {!! Form::hidden('email',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group" style="width: 50%;">
@@ -120,63 +130,183 @@
         <div class="row text-center">
             <h2><i>Eduactional Information</i></h2>
         </div>
-            $table->string('matric');<br/>
-            $table->string('intermediate');<br/>
-            $table->string('bs_bsc');<br/>
-            $table->string('ms_Msc');<br/>
-            $table->string('other');<br/>
-
-
-
-
-
-
-
-    <div class="row text-center">
-        <h2><i>Job Experience</i></h2>
-    </div>
-            $table->string('comp1');<br/>
-            $table->string('comp2');<br/>
-            $table->string('comp3');<br/>
-
-
-    <div class="row text-center">
-        <h2><i>Researce and Publication</i></h2>
-    </div>
-            $table->string('title1');<br/>
-            $table->string('year1');<br/>
-            $table->string('title2');<br/>
-            $table->string('year2');<br/>
-
-    <div class="row text-center">
-        <h2><i>Award</i></h2>
-    </div>
-            $table->string('award1');<br/>
-            $table->string('award2');<br/>
-
-    <div class="row text-center">
-        <h2><i>Skills</i></h2>
-    </div>
-            $table->string('Skill1');<br/>
-            $table->string('Skill2');<br/>
-            $table->string('Skill3');<br/>
-
-    <div class="row text-center">
-        <h2><i>Eduactional Information</i></h2>
-    </div>
-            //experience<br/><br/><br/>
-            $table->string('Skill3');<br/>
-
-    <div class="row text-center">
-        <h2><i>Write something about you...</i></h2>
-    </div>
-            $table->string('about_you');<br/>
-
-<br/>        
+        <hr/>
+        <div class="row" id="edu-info">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    {!! Form::label('Matric') !!}
+                    <input list = "Matric" name="matric" class="form-control" placeholder="Major Subjects">
+                    <datalist id="Matric">
+                        <option value="Science">Science</option>
+                        <option value="Arts">Arts</option>
+                    </datalist>
+                </div>
 
                 <div class="form-group">
-                    {!! Form::submit('Submit',['class' => 'btn btn-primary form-control']) !!}
+                    {!! Form::label('Intermediate') !!}
+                    <input list = "Intermediate" name="intermediate" class="form-control" placeholder="Major Subjects">
+                    <datalist id="Intermediate">
+                        <option value="Pre-Engineering">Pre-Engineering</option>
+                        <option value="Pre-Medical">Pre-Medical</option>
+                        <option value="ICS">ICS</option>
+                        <option value="F.A">F.A</option>
+                    </datalist>
+                
                 </div>
+
+                <div class="form-group">
+                    {!! Form::Label('If Any Other Qualification: ') !!}
+                    <input type="text" name="other" class="form-control" placeholder="Type Here...">
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="form-group">
+                    {!! Form::label('Bs / B.Sc') !!}
+                    <input list = "Bs / B.Sc" name="bs_bsc" class="form-control" placeholder="Major Subjects">
+                    <datalist id="Bs / B.Sc">
+                        <option value="Computer Studies">Computer Studies</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Physics">Physics</option>
+                    </datalist>
+                </div>
+                
+                <div class="form-group">
+                    {!! Form::label('MS / M.Sc') !!}
+                    <input list = "MS / M.Sc" name="ms_Msc" class="form-control" placeholder="Major Subjects">
+                    <datalist id="MS / M.Sc">
+                        <option value="Computer Studies">Computer Studies</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Biology">Biology</option>
+                        <option value="Accounting & Finance">Accounting & Finance</option>
+                    </datalist>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <h2><i>Job Experience</i></h2>
+        </div>
+        <hr/>
+        <div class="row" id="job-info">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Company Name</label>
+                    <input type="text" class="form-control" name="comp1" placeholder="Company Name"></input>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Job Designation</label>
+                    <input type="text" class="form-control" name="comp2" placeholder="Job Designation"></input>
+                </div>                
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Type Any Other Job Deatil</label>
+                    <input type="text" class="form-control" name="comp3" placeholder="Job Designation (Company Name)"></input>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <h2><i>Researce and Publication</i></h2>
+        </div>
+        <hr/>
+        <div class="row" id="research-info">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>1: Researce and Publication Title</label>
+                    <input type="text" name="title1" placeholder="Researce and Publication Title" class="form-control"></input>
+                </div>
+                <div class="form-group">
+                    <label>1: Researce and Publication Year</label>
+                    <input type="number" name="year1" placeholder="Researce and Publication Year" class="form-control"></input>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>2: Researce and Publication Title</label>
+                    <input type="text" name="title2" placeholder="Researce and Publication Title" class="form-control"></input>
+                </div>
+                <div class="form-group">
+                    <label>2: Researce and Publication Year</label>
+                    <input type="number" name="year2" placeholder="Researce and Publication Year" class="form-control"></input>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <h2><i>Award</i></h2>
+        </div>
+        <hr/>
+        <div class="row" id="award-info">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>1: Award Name</label>
+                    <input type="text" name="award1" class="form-control" placeholder="Award Name"></input>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>2: Award Name</label>
+                    <input type="text" name="award2" class="form-control" placeholder="Award Name"></input>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <h2><i>Skills</i></h2>
+        </div>
+        <hr/>
+        <div class="row">
+            <h4 style="margin-left: 1%;">Type Any Three Skills: </h4>
+            <div class="col-lg-4">
+                <input type="text" name="Skill1" placeholder="Skill One" class="form-control"></input>
+            </div>
+            <div class="col-lg-4">
+                <input type="text" name="Skill2" placeholder="Skill Two" class="form-control"></input>                
+            </div>
+            <div class="col-lg-4">
+                <input type="text" name="Skill3" placeholder="Skill Three" class="form-control"></input>                
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <h2><i>Industrial Experience</i></h2>
+        </div>
+            <h4 style="margin-left: 1%;">Type Total Experience in Years: </h4>
+
+            <input type="number" name="exp" class="form-control">
+            </input>
+
+        <div class="row text-center">
+            <h2><i>Write something about yourself...</i></h2>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-lg-4">
+
+            </div>
+            <div class="col-lg-4">
+                <textarea rows="4" cols="50" name="about_you"class="form-control">
+                    Write something about yourself in few sentencs...
+                </textarea>
+
+            </div>
+            <div class="col-lg-4">
+
+            </div>
+        </div>
+        <div class="form-group">
+            {!! Form::submit('Submit',['class' => 'btn btn-primary submit-btn']) !!}
+        </div>
 
                 {!! Form::close() !!}
 </div>

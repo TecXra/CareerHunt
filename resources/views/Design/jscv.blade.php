@@ -1,22 +1,7 @@
 @extends('layouts.app')
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Job Seeker Detail</title>
-  <link rel="stylesheet" href="{{ asset('jquery-ui.css')}}">
-  <script src="{{ asset('jquery-1.10.2.js')}}"></script>
-  <script src="{{ asset('jquery-ui.js')}}"></script>
-  <link rel="stylesheet" href="{{ asset('style.css')}}">
-</head>
-
-<script type="text/javascript">
-	$(function() {
-	$("#accordion").accordion();
-  });
-</script>
-
-
+@section('styles')
+	<link rel="stylesheet" href="{{ asset('jquery-ui.css')}}">
 <style type="text/css">
 	#profile-pic
 	{
@@ -46,6 +31,11 @@
 		font-family: cursive;
 		color: lightblue;
 	}
+	#profile-pic
+	{
+		width: 100%;
+		
+	}
 	#latest-job
 	{
 		border:groove 1px;
@@ -60,9 +50,10 @@
 
 </style>
 
-<body>
+@endsection
 
-@include('partials.index-header2')
+
+@section('content')
 <div class="container-fluid">
 	<div class="row text-center">
 		<h2>
@@ -74,7 +65,7 @@
 			<div class="row">
 					<h2>Personal Information</h2>
 				<div class="col-lg-3">
-					<img src="#" alt="Profile Picture" class="thumbnail" id="profile-pic">
+					<img src="{{ asset('img/person-flat.png') }}" alt="Profile Picture" class="thumbnail" id="profile-pic">
 					<h3 id="profile-pic-heading">Profile Picture</h3>
 				</div>
 				<div class="col-lg-9" style="margin-bottom: 1%;">
@@ -170,92 +161,24 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col-lg-2" style="margin-bottom: 1%; box-shadow: 3px 3px 3px black; height: 410px; overflow-y: scroll; border-left: dotted 1px; border-radius: 5%;">
-			<h3 style="border: groove 5px; font-weight: bolder; font-style: italic; box-shadow: 2px 2px 2px black;">Latest Jobs</h3>
-				<marquee direction="up">
-					<div class="row" id="latest-job">
-						<div class="col-lg-12">
-							<a href="#">Java Developer</a>
-							<h5 class="text-muted">Softec</h5>
-							<h5 class="text-muted">Lahore Pakistan</h5>
-						</div>
-					</div>
-
-					<div class="row" id="latest-job">
-						<div class="col-lg-12">
-							<a href="#">Java Developer</a>
-							<h5 class="text-muted">Softec</h5>
-							<h5 class="text-muted">Lahore Pakistan</h5>
-						</div>
-					</div>
-
-					<div class="row" id="latest-job">
-						<div class="col-lg-12">
-							<a href="#">Java Developer</a>
-							<h5 class="text-muted">Softec</h5>
-							<h5 class="text-muted">Lahore Pakistan</h5>
-						</div>
-					</div>
-
-					<div class="row" id="latest-job">
-						<div class="col-lg-12">
-							<a href="#">Java Developer</a>
-							<h5 class="text-muted">Softec</h5>
-							<h5 class="text-muted">Lahore Pakistan</h5>
-						</div>
-					</div>
-
-					<div class="row" id="latest-job">
-						<div class="col-lg-12">
-							<a href="#">Java Developer</a>
-							<h5 class="text-muted">Softec</h5>
-							<h5 class="text-muted">Lahore Pakistan</h5>
-						</div>
-					</div>
-
-					<div class="row" id="latest-job">
-						<div class="col-lg-12">
-							<a href="#">Java Developer</a>
-							<h5 class="text-muted">Softec</h5>
-							<h5 class="text-muted">Lahore Pakistan</h5>
-						</div>
-					</div>
-
-					<div class="row" id="latest-job">
-						<div class="col-lg-12">
-							<a href="#">Java Developer</a>
-							<h5 class="text-muted">Softec</h5>
-							<h5 class="text-muted">Lahore Pakistan</h5>
-						</div>
-					</div>
-				</marquee>
-		</div>
-
-
-
-
-
-
-<!--
-		<div class="input-group">
-			<div class="input-group-addon">First Name * </div>
-			<input type="text" class="form-control" placeholder="Asif Sharif Shahid" disabled="disabled">
-			<div class="input-group-addon">
-				<a href="#" style="text-decoration: none;">Edit</a>
-			</div>
-		</div>
--->
 	</div>
 </div>
-@include('partials.footer2')
 
-</body>
-</html>
+@endsection
 
 
 
 
 
+@section('scripts')
+  <script src="{{ asset('jquery-1.10.2.js')}}"></script>
+  <script src="{{ asset('jquery-ui.js')}}"></script>
+<script type="text/javascript">
+	$(function() {
+	$("#accordion").accordion();
+  });
+</script>
 
+@endsection
 
 

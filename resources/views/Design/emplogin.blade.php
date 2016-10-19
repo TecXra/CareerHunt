@@ -5,14 +5,18 @@
    .col-md-3{
         height:600px;
     }
-    #from-container
+    #form-row
     {
         background-image: url("img/bg/bg.jpg");
-//        background-color: WhiteSmoke;
+        margin-top: -1.5%;
+        margin-left: -2.2%;
+        width: 104.5%;
+
+/*        background-color: WhiteSmoke;*/
     }
     #login
     {
-//        opacity: 0.6;
+/*        opacity: 0.6;*/
         background-image: url("img/bg/bg3.jpg");
             margin-top:50px;
             padding-top:40px;
@@ -84,6 +88,7 @@ button {
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="row" id="login">
+            <h2 class="text-center">Login Form</h2>
                 <div class="col-md-2"></div>
                 <div class="col-md-8" id="login-form">
                     {!! Form::open(array('action' => 'UsersController@login')) !!}
@@ -94,7 +99,7 @@ button {
                             </div>
                         </div>
                     
-                        <div class="form-group  {{ $errors->has('email') ? 'has-error' : '' }}"  style="border: solid;">
+                        <div class="form-group  {{ $errors->has('email') ? 'has-error' : '' }}">
                             {!! Form::label('email', "E-Mail Address", array('class' => 'control-label')) !!}
                             <div class="controls">
                                 {!! Form::text('email', null, array('class' => 'form-control')) !!}
@@ -102,7 +107,7 @@ button {
                             </div>
                         </div>
 
-                        <div class="form-group  {{ $errors->has('password') ? 'has-error' : '' }}" style="border: solid;">
+                        <div class="form-group  {{ $errors->has('password') ? 'has-error' : '' }}">
                             {!! Form::label('password', "Password", array('class' => 'control-label')) !!}
                             <div class="controls">
                                 {!! Form::password('password', array('class' => 'form-control')) !!}
@@ -115,7 +120,7 @@ button {
                                 <label>Remember Me</label>
                             </div>
  -->
-                            <div class="col-md-12 text-center" style="border: solid;">
+                            <div class="col-md-12 text-center">
                                 <button type="submit" class="btn btn-primary" style="margin-right: 15px;">Login</button>
                             </div>
                     {!! Form::close() !!}
@@ -126,11 +131,10 @@ button {
                             </div> 
     -->
                             <div class="col-md-12 text-center">
-                                <a href="{{URL::to('emsignup')}}" id="link" class="blink">
+                                <a href="{{URL::to('emsignup')}}" id="link" class="blink1">
                                     New Here? Create an account.
                         </div>
-                                
-                            </div>
+                    </div>
 
                 <div class="col-md-2"> </div>
             </div>
@@ -147,8 +151,8 @@ button {
 @section('scripts')
     <script>
     function blinker() {
-        $('.blink').fadeOut(500);
-        $('.blink').fadeIn(500);
+        $('.blink1').fadeOut(500);
+        $('.blink1').fadeIn(500);
     }
     setInterval(blinker, 1000);
     </script>

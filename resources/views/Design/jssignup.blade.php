@@ -9,7 +9,7 @@
     }
     #login
     {
-        opacity: 0.6;
+/*        opacity: 0.6;*/
         background-image: url("img/bg/bg3.jpg");
         margin-top:50px;
         padding-top:20px;

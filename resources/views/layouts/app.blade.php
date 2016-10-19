@@ -5,6 +5,11 @@
 <title>Main</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
+
+<script type="text/javascript" src="{{ asset ('js/angular.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset ('js/angular.js')}}"></script>
+
+
 <link rel="stylesheet" type="text/css" href="{{ asset('Site.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css')}}">
 <script type="text/javascript" src="{ asset('css/'bootstrap.min.js')}}"></script>
@@ -34,9 +39,22 @@
 
 </style>
 
-<body>
+<body ng-app="sampleApp">
+
+<!-- <div ng-controller="myCtrl">
+  <% firstName + " " + lastName %>
+</div>
+<div>
+<input type="text" ng-model="name"></input>
+<input type="text" ng-model="last_name"></input>
+  <h1>
+    <% name + " " + last_name%>
+  </h1>
+</div>
+ -->
+
 @include('partials.index-header')
-@include('partials.nav')
+
 
 <div class="container-fluid">
   @yield('content')
