@@ -53,8 +53,10 @@ class JobSeekerController extends Controller
 
    
     public function index3()
+
     {
-      return view('Design.index3');
+      $Pinfos = Pinfo::take(3)->orderBy('created_at','asc');
+      return view('Design.index3',compact('Pinfos'));
     }
 
    /* public function jsdashboard()
@@ -150,10 +152,11 @@ public function storejobseeker(Requests\PinfoRequest $request){
       
       // $user->profile->save($request);
 //dd($request);
-        $Pinfos = Pinfo:: Create($request->all());
-        $Pinfos->save();
-        $Compinfoes = Compinfo:: Create($request->all());
+        $Compinfoes = Compinfo :: Create($request->all());
         $Compinfoes->save();
+        $Pinfos = Pinfo :: Create($request->all());
+        $Pinfos->save();
+        
 
 if (isset($request -> image)) 
         {

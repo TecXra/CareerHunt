@@ -35,7 +35,21 @@ class SearchController extends Controller
     // Returns an array of articles that have the query string located somewhere within 
     // our articles titles. Paginates them so we can break up lots of search results.
     $articles = DB::table('pinfos')
-                                   paginate(10);
+    ->where('pinfos.username', 'LIKE', '%' . $text . '%')
+    ->orWhere('pinfos.email', 'LIKE', '%' . $text . '%')
+    ->orWhere('pinfos.matric', 'LIKE', '%' .  . '%')
+    ->orWhere('pinfos.inetmediate', 'LIKE', '%' . $text . '%')
+    ->orWhere('pinfos.bs_bsc', 'LIKE', '%' . $text . '%')
+    ->orWhere('pinfos.ms_msc', 'LIKE', '%' . $text . '%')
+    ->orWhere('pinfos.skill1', 'LIKE', '%' . $text . '%')
+    ->orWhere('pinfos.skill2', 'LIKE', '%' . $text . '%')
+    ->orWhere('pinfos.skill3', 'LIKE', '%' . $text . '%')
+    ->orWhere('pinfos.about_you', 'LIKE', '%' . $text . '%')
+    ->orWhere('pinfos.skill2', 'LIKE', '%' . $text . '%')->take(4)->orderBy('exp','desc');
+
+
+
+                                  
                                   // ->orWhere('users.username', 'LIKE', '%' . $text . '%')->paginate(10);
                                    
        // dd($articles);

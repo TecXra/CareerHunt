@@ -196,9 +196,9 @@ $show = 'show/' . $Compinfoes->id ;
 
     public function index2()
     {
-
-      $Posts=Post::all();
-      return view('Design.index2',compact('Posts'));
+$Pinfos = Pinfo::take(3)->orderBy('created_at','asc');
+      
+      return view('Design.index2',compact('Pinfos'));
     }
 
   public function emplogin()
