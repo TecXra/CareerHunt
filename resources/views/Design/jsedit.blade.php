@@ -1,4 +1,6 @@
-{!! Form::model($Pinfos, array('url' => URL::to('jsupdate') . '/' . $Pinfos->id, 'method' => 'post')) !!}
+{{ Auth::user()->name }}
+
+{!! Form::model($Pinfos, array('url' => URL::to('jsupdate') . '/' . $Pinfos->id, 'method' => 'post','files'=>true)) !!}
 
         <div class="row text-center">
             <h2><i>Personal Information</i></h2>

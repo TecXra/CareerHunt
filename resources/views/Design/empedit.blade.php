@@ -4,7 +4,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="row">
-
+{{ Auth::user()->name }}
         <div class="row text-center">
             <h3>Update Your Company Detail</h3>
         </div>

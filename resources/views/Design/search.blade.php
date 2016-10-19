@@ -8,7 +8,7 @@ There is no such job seeker or the job seeker required not lies in the specific 
     @if($article->city==={{$region}})
 <label>Language: </label>    {{$article->name}}
 <label>City: </label>    {{$article->city}}
-
+<a href="{{action('JobSeekerController@jsedit',[ $Pinfos->id]) }}">Edit</a>
 @endif
     @endforeach
 @endif

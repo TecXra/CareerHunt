@@ -56,22 +56,27 @@
 <!-- 
     <form action="storejobseeker" method="post" files="true">
  -->
-
+{{ Auth::user()->name }}
 <div class="container-fluid" style="margin-bottom: 1%;">
-    {!! Form::model(array('url' => URL::to('#'), 'method' => 'post')) !!}
+    {!! Form::open(array('url' => URL::to('storejobseeker'), 'method' => 'post','files'=> true)) !!}
         <div class="row text-center">
             <h2><i>Personal Information</i></h2>
         </div>
         <hr/>
         <div class="row" id="per-info">
             <div class="col-lg-6">
+            
+            <div class="form-group">
+                    {!! Form::hidden('User Name') !!}
+                    {!! Form::hidden('pinfoes_id',$Juser->id,['class'=>'form-control']) !!}
+                </div>
                 <div class="form-group">
                     {!! Form::hidden('User Name') !!}
-                    {!! Form::hidden('username',null,['class'=>'form-control']) !!}
+                    {!! Form::hidden('username',$Juser->name,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::hidden('Email') !!}
-                    {!! Form::hidden('email',null,['class'=>'form-control']) !!}
+                    {!! Form::hidden('email',$Juser->email,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group" style="width: 50%;">
                     {!! Form::label('Profile Picture') !!}

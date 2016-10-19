@@ -8,7 +8,7 @@
 <script type="text/javascript" src="{{ asset('js/jsr/jquery-1.9.1.min.js')}}"></script>
 <script type="text/javascript" src="{{ asset('js/jsr/jssor.slider.min.js')}}"></script>
 <script type="text/javascript" src="{{ asset('js/jsr/jssor.slider.mini.js')}}"></script>
-
+{{ Auth::user()->name }}
 </head>
 
 <script type="text/javascript">

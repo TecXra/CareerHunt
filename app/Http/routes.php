@@ -101,9 +101,11 @@ Route::post('empupdate/{id}','EmployerController@empupdate');
 Route::post('emprofile/empstore','EmployerController@store'); 
 
 Route::post('jsprofile/storejobseeker','JobSeekerController@storejobseeker');
+Route::post('storejobseeker','JobSeekerController@storejobseeker');
 Route::get('showjobseeker/{id}','JobSeekerController@showjobseeker');
 Route::get('showjobseeker/{id}/jsedit','JobSeekerController@jsedit');
-Route::post('jsupdate/{id}','JobSeekerController@jspupdate');
+Route::post('jsupdate/{id}','JobSeekerController@jsupdate');
+//Route::resource('jsupdate', 'JobSeekerController');
 Route::post('jsprofile/rpstore','JobSeekerController@rpstore');
 
 Route::post('store2','DesignController@store2');

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-
+{{ Auth::user()->name }}
 
 @section('content')
 

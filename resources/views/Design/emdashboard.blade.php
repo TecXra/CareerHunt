@@ -15,6 +15,8 @@
                       
       <a href="{{action('EmployerController@empedit',[ $Compinfo->id]) }}">Edit Profile</a>
 <br/>
+
+<a href="Design/{{ $Compinfo->id }}"><img src="{{ asset($Compinfo->company_logo) }}" style="width:200px; height:150px;" /></a><br/>
       <a href="" data-toggle="modal" data-target="#jobpost" id="asw">Post Job</a>
 
     <div class="row" id="asd2"></div>
@@ -23,7 +25,7 @@
 </div>
 
 
-
+{{ Auth::user()->name }}
 
 
 

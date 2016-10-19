@@ -14,7 +14,7 @@
     }
 </style>
 @endsection
-
+{{ Auth::user()->name }}
 
 
 @section('content')

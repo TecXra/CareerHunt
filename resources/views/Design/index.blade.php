@@ -597,16 +597,9 @@
     <div class="row" style="margin-left:3%;">
         @foreach($Pinfos as $Pinfo)
         <label>Job Title: </label>
-        {{$Pinfo->job_title}}<br/>
-        <label>Job Description</label>
-        {{$Pinfo->job_description}}<br/>
-        <label>Job Duration</label>
-        {{$Pinfo->job_duration}}<br/>
-        <label>Apply Due: </label>
-        {{$Pinfo->apply_due}}<br/>
-        <label>Last Date: </label>
-        {{$Pinfo->last_date}}<br/><br/><br/>
-
+        <a href="Design/{{ $Pinfo->id }}"><img src="{{ asset($Pinfo->image) }}" style="width:200px; height:150px;" /></a><br/>
+        <br/><br/>
+{{$Pinfo->town}}
         @endforeach
     </div>
 </div>

@@ -46,7 +46,7 @@ class JobSeekerController extends Controller
 	}
   public function index()
     {
-    $Pinfos = Pinfo::take(3)->orderBy('created_at','asc');
+    $Pinfos = Pinfo ::all(); //take(3)->orderBy('created_at','asc');
     //  $Posts=Post::all();
       return view('Design.index',compact('Pinfos'));
     }
@@ -190,6 +190,22 @@ public function jsedit($id){
         $Pinfos=Pinfo::findOrFail($id);
         $Pinfos->update($request->all());
         $Pinfoshow = 'showjobseeker/' . $Pinfos->id ;
+
+        if (isset($request -> image)) 
+        {
+          # code...
+
+
+         // $imageName = $Compinfoes->id . '_compinfo.' .
+        $imageName = $Pinfos->id . '_picinfo.' .
+   //     dd($imageName);
+        $request->file('image')->getClientOriginalExtension();
+        $imageCompletePath = '/image/'. $imageName ;
+        $request->file('image')->move(
+        base_path() . '/public/image/', $imageName);
+        $Pinfos->update(array('image' => $imageCompletePath));
+
+}
   return redirect ($Pinfoshow);
     }
 
