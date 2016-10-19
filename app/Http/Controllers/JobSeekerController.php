@@ -46,7 +46,9 @@ class JobSeekerController extends Controller
 	}
   public function index()
     {
-    $Pinfos = Pinfo ::all(); //take(3)->orderBy('created_at','asc');
+    //$Pinfos = Pinfo ::all();//take(3)->orderBy('created_at','asc');
+    $Pinfos = DB::table('pinfos')->take(3)->orderBy('exp','desc')->get();
+    //dd($Pinfos);
     //  $Posts=Post::all();
       return view('Design.index',compact('Pinfos'));
     }

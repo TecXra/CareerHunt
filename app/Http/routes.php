@@ -86,25 +86,32 @@ Route::get('eform', 'CareerHuntController@eform');
 
 Route::get('signup','JobSeekerController@signup');
 Route::get('jssignup','JobSeekerController@jssignup');
-Route::get('jsprofile/{id}','JobSeekerController@jsprofile');
+
 
 Route::get('emsignup','EmployerController@emsignup');
-Route::get('emprofile/{id}','EmployerController@emprofile');
 
-Route::get('login','JobSeekerController@login');
+
+//Route::get('login','JobSeekerController@login');
 
 Route::get('jobs','EmployerController@jobs');
 
+Route::get('emprofile/{id}','EmployerController@emprofile');
 Route::get('show/{id}','EmployerController@show');
 Route::get('show/{id}/empedit','EmployerController@empedit');
 Route::post('empupdate/{id}','EmployerController@empupdate');
 Route::post('emprofile/empstore','EmployerController@store'); 
+
+
 
 Route::post('jsprofile/storejobseeker','JobSeekerController@storejobseeker');
 Route::post('storejobseeker','JobSeekerController@storejobseeker');
 Route::get('showjobseeker/{id}','JobSeekerController@showjobseeker');
 Route::get('showjobseeker/{id}/jsedit','JobSeekerController@jsedit');
 Route::post('jsupdate/{id}','JobSeekerController@jsupdate');
+Route::get('jsprofile/{id}','JobSeekerController@jsprofile');
+Route::get('jsdetail/{id}','SearchController@jsdetail');
+Route::get('searchauth','SearchController@searchauth');
+
 //Route::resource('jsupdate', 'JobSeekerController');
 Route::post('jsprofile/rpstore','JobSeekerController@rpstore');
 

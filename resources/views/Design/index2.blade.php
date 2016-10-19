@@ -247,7 +247,7 @@ $(function(){
                     <h2 id="search-h1">
                         Search online and find Employers in Pakistan
                     </h2>
-                    <form action="search" method="get" files="true">
+                    <form action="searchauth" method="get" files="true">
                         <div class="col-xs-12 col-sm-4 col-md-4">
                         <div class="form-group">
                             <input class="form-control" name="search_text" placeholder="Search Job Seekers"/>
