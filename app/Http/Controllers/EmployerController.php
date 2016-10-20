@@ -222,7 +222,7 @@ $show = 'show/' . $Compinfoes->id ;
 
     public function index2()
     {
-      $Pinfos = Pinfo::take(3)->orderBy('created_at','asc');
+      $Pinfos = DB::table('pinfos')->take(3)->orderBy('exp','desc')->get();
 
       $Compinfo = Auth::user();
 
