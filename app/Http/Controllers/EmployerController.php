@@ -27,9 +27,13 @@ class EmployerController extends Controller
    public function __construct()
     {
         $this->middleware('auth',['except' => ['emsignup', 'store','emplogin']]);
-        $this->middleware('guest',['only' => ['emplogin']]);
 
-        //$this->middleware('log', ['only' => ['fooAction', 'barAction']]);
+
+
+      //  $this->middleware('guest',['emsignup', 'emplogin' ]);
+
+
+        $this->middleware('guest', ['only' => ['emsignup', 'emplogin']]);
 
       //  $this->middleware('subscribed', );
     }
@@ -74,7 +78,7 @@ public function jobpost()
         return view('Design.jobpost');
     }
 
-public function jobstore(Requests\PostRequest $request){
+    public function jobstore(Requests\PostRequest $request){
 
              
       // $user->profile->save($request);
@@ -82,7 +86,7 @@ public function jobstore(Requests\PostRequest $request){
         $Posts = Post :: Create($request->all());
         $Posts->save();
 
- return redirect ('jobshow');
+        return redirect ('jobshow');
 
     }
 
@@ -113,7 +117,7 @@ public function emdashbord()
 
      public function emdashboard($id)
     {
-
+        
        $Compinfo=Compinfo::find($id);
 
       return view('Design.emdashboard',compact('Compinfo'));
@@ -135,30 +139,61 @@ public function empedit($id){
         return view('Design.empedit',compact('Compinfoes'));
     }
 
-    public function empupdate(Requests\PostRequest $request,$id){
+    public function empupdate(Requests\CompinfoRequest $request,$id){
+       //dd($request);
         $Compinfoes=Compinfo::findOrFail($id);
         $Compinfoes->update($request->all());
 
-        if (isset($request -> image)) 
-        {
-          # code...
+        if (isset($request -> company_logo)) 
+        {     
+
+          //dd( $request->file );
 
 
-         // $imageName = $Compinfoes->id . '_compinfo.' .
-        $imageName = $Pinfos->id . '_picinfo.' .
-   //     dd($imageName);
-        $request->file('image')->getClientOriginalExtension();
-        $imageCompletePath = '/image/'. $imageName ;
-        $request->file('image')->move(
-        base_path() . '/public/image/', $imageName);
-        $Pinfos->update(array('image' => $imageCompletePath));
+                $imageName = $Compinfoes->id . '_compinfo.' .          
+               $request->file('company_logo')->getClientOriginalExtension();
 
-}
+
+
+                $imageCompletePath = '/company_logo/'. $imageName ;
+                $request->file('company_logo')->move(
+                base_path() . '/public/company_logo/', $imageName);
+                $Compinfoes->update(array('company_logo' => $imageCompletePath));
+
+          }
         $show = 'show/' . $Compinfoes->id ;
+        return redirect ($show);
+    }
+    public function store(Requests\CompinfoRequest $request){
+
+
+            $pinfoes = Pinfo :: Create($request->all());
+            $pinfoes->save();
+            $Compinfoes = Compinfo :: Create($request->all());
+            $Compinfoes->save();
+
+
+        if (isset($request -> company_logo)) 
+        {
+              $imageName = $Compinfoes->id . '_compinfo.' .
+              $request->file('company_logo')->getClientOriginalExtension();
+              $imageCompletePath = '/company_logo/'. $imageName ;
+              $request->file('company_logo')->move(
+              base_path() . '/public/company_logo/', $imageName);
+              $Compinfoes->update(array('company_logo' => $imageCompletePath));
+
+        }
+
+
+
+
+
+$show = 'show/' . $Compinfoes->id ;
   return redirect ($show);
+  
     }
 
-public function estore(Requests\EuserRequest $request){
+    public function estore(Requests\EuserRequest $request){
 
       
       // $user->profile->save($request);
@@ -174,50 +209,8 @@ public function estore(Requests\EuserRequest $request){
 
 //return "$emprofile";
 
-  return redirect ($emprofile);
+        return redirect ($emprofile);
 
-    }
-
-
-    public function store(Requests\CompinfoRequest $request){
-
-
-//dd($request);
-
-     //  $user = Euser::Find($id);
-      
-      // $user->profile->save($request);
-
-        $pinfoes = Pinfo :: Create($request->all());
-        $pinfoes->save();
-        $Compinfoes = Compinfo :: Create($request->all());
-        $Compinfoes->save();
-
-  //        dd($Compinfoes);
-//        $image = $Compinfoes->company_logo;
-
-
-        if (isset($request -> company_logo)) 
-        {
-          # code...
-        
-
-        $imageName = $Compinfoes->id . '_compinfo.' .
-        $request->file('company_logo')->getClientOriginalExtension();
-        $imageCompletePath = '/company_logo/'. $imageName ;
-        $request->file('company_logo')->move(
-        base_path() . '/public/company_logo/', $imageName);
-        $Compinfoes->update(array('company_logo' => $imageCompletePath));
-
-}
-
-
-
-
-
-$show = 'show/' . $Compinfoes->id ;
-  return redirect ($show);
-  
     }
 
     public function index2()

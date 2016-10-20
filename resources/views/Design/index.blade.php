@@ -574,7 +574,8 @@
  
     <div class="row" style="padding: 1%;">
         @foreach($Pinfos as $Pinfo)
-            @if($Pinfo->username!=='')
+            @if($Pinfo->username!=='' && $Pinfo->email!=='' && $Pinfo->image!=='' && $Pinfo->age!=='' && $Pinfo->phone!=='' && $Pinfo->address!=='' && $Pinfo->country!=='' && $Pinfo->city!=='' && $Pinfo->town!=='' && $Pinfo->martial_status!=='' && $Pinfo->nationality!=='' && $Pinfo->religion!=='' && $Pinfo->matric!=='' && $Pinfo->intermediate!=='' && $Pinfo->bs_bsc!=='' && $Pinfo->Skill1!=='' && $Pinfo->exp!=='' && $Pinfo->about_you!=='')
+
                 <div class="col-lg-4">
                     <div class="tm-about-box-1">
                         <img src="{{ asset($Pinfo->image) }}" alt="Job Seeker Image" class="tm-about-box-1-img"/>
@@ -587,7 +588,9 @@
                         <a href="#" class="btn btn-default">View Detail</a>
                     </div>
                 </div>
+
             @endif
+
         @endforeach
 
     </div>

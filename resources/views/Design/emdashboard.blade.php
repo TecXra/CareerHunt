@@ -25,13 +25,42 @@
 <div class="container-fluid">
   <div class="row">
     <h2 class="text-center" id="emp-heading">Employer Dashboard</h2>   
-      <div class="col-lg-4">
-        <label>Company Name: <span>{{Auth::user()->name}}</span> </label> <br/>
-        <label>Company Head Name: <span>{{$Compinfo->comp_head_name}}</span> </label>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="border-right: solid 1px lightblue;">
+        <h4>Company Logo</h4>
+        <a href="Design/{{ $Compinfo->id }}"><img src="{{ asset($Compinfo->company_logo) }}" class="img-thumbnail" style="width:200px; height:150px;" /></a><br/>        
       </div>
-      <a href="{{action('EmployerController@empedit',[ $Compinfo->id]) }}">Edit Profile</a>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="border-right: solid 1px lightblue;">
+        <h5>
+          <label>Company Name: <span>{{Auth::user()->name}}</span> </label> 
+        </h5>
+        <h5>
+          <label>Company Head Name: <span>{{$Compinfo->comp_head_name}}</span> </label>  
+        </h5>
+        <h5>
+          <label>Company Slogan: <span>{{$Compinfo->slogan}}</span> </label>
+        </h5>
+        <h5>
+          <label>HR Head Name: <span>{{$Compinfo->head_hr_department}}</span> </label>
+        </h5>
+        <h5>
+          <label>Industry Type: <span>{{$Compinfo->industry_type}}</span> </label>
+        </h5>
+        <h5>
+          <label>Company Website: <span>{{$Compinfo->comp_website}}</span> </label>
+        </h5>
+      </div>
 
-      <a href="Design/{{ $Compinfo->id }}"><img src="{{ asset($Compinfo->company_logo) }}" class="img-thumbnail" style="width:200px; height:150px;" /></a><br/>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <h5>
+          <label>Company Phone: <span>{{$Compinfo->phone}}</span> </label>        
+        </h5>
+        <h5>
+          <label>Company E-Mail: <span>{{$Compinfo->email}}</span> </label>
+        </h5>
+        <a href="{{ action('EmployerController@empedit',[ $Compinfo->id]) }}" class="btn btn-info" style="margin-left: 25%; margin-top: 2%; padding: 3%;">Edit Profile</a>
+      </div>
+
+
 
 <!--       <a href="" data-toggle="modal" data-target="#jobpost" id="asw">Post Job</a>
  -->

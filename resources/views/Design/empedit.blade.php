@@ -4,7 +4,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="row">
-            {!! Form::model($Compinfoes, array('url' => URL::to('empupdate') . '/' . $Compinfoes->id, 'method' => 'post')) !!}
+            {!! Form::model($Compinfoes, array('url' => URL::to('empupdate') . '/' . $Compinfoes->id, 'method' => 'post','files'=>true)) !!}
 
         <div class="row text-center">
             <h3>Update Your Company Detail</h3>
@@ -41,9 +41,8 @@
             </div>
             <div class="col-lg-6">
             <div class="form-group">
-                <input type="file" name="company_logo" class="form-control">
+                <input type="file" name="company_logo" class="form-control" accept="image/*">
             </div>
-
                 <div class="form-group">
                     {!! Form::label('Industry') !!}
                     {!! Form::select('industry_type', 
@@ -107,7 +106,7 @@
                 </div>
                 <div class="form-group">
                     {!! Form::label('Phone #') !!}
-                    {!! Form::number('phone',null,['class'=>'form-control','placeholder'=> 'Enter Phone Number']) !!}
+                    {!! Form::text('phone',null,['class'=>'form-control','placeholder'=> 'Enter Phone Number']) !!}
                 </div>
             </div>
 
