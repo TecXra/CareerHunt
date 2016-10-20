@@ -52,7 +52,7 @@ background-image: url("img/bg/bg.jpg");
 
 #search-h1
 {
-	color: rgba(155,180,240,60);
+	color: rgba(155,180,240,0);
 	font-family: cursive;
 }
 #top-link

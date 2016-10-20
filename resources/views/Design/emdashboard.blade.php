@@ -3,6 +3,19 @@
 
 @section('styles')
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style type="text/css">
+  #emp-heading
+  {
+    width: 25%;
+    margin-left: 35%;
+    border-bottom: solid lightblue;
+    padding-bottom: 1%;
+  }
+
+</style>
+
+
+
 @endsection
 
 
@@ -11,12 +24,15 @@
 <!--Dashboard Inner Div-->
 <div class="container-fluid">
   <div class="row">
-    <h2 class="text-center">Employer Dashboard</h2>
-                      
+    <h2 class="text-center" id="emp-heading">Employer Dashboard</h2>   
+      <div class="col-lg-4">
+        <label>Company Name: <span>{{Auth::user()->name}}</span> </label> <br/>
+        <label>Company Head Name: <span>{{$Compinfo->comp_head_name}}</span> </label>
+      </div>
       <a href="{{action('EmployerController@empedit',[ $Compinfo->id]) }}">Edit Profile</a>
-<br/>
 
-<a href="Design/{{ $Compinfo->id }}"><img src="{{ asset($Compinfo->company_logo) }}" style="width:200px; height:150px;" /></a><br/>
+      <a href="Design/{{ $Compinfo->id }}"><img src="{{ asset($Compinfo->company_logo) }}" class="img-thumbnail" style="width:200px; height:150px;" /></a><br/>
+
 <!--       <a href="" data-toggle="modal" data-target="#jobpost" id="asw">Post Job</a>
  -->
     <div class="row" id="asd2"></div>

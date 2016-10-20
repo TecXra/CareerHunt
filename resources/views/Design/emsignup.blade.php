@@ -86,7 +86,7 @@
                         <div class="form-group  {{ $errors->has('name') ? 'has-error' : '' }}">
                             {!! Form::label('name', trans('site/user.name'), array('class' => 'control-label')) !!}
                             <div class="controls">
-                                <input type="text" name="name" class="form-control" required> </input>
+                                <input type="text" name="name" class="form-control" placeholder="Company Name" required> </input>
                                 <!-- {!! Form::text('name', null, array('class' => 'form-control')) !!} -->
                                 <span class="help-block">{{ $errors->first('name', ':message') }}</span>
                             </div>
@@ -101,7 +101,7 @@
                         <div class="form-group  {{ $errors->has('email') ? 'has-error' : '' }}">
                             {!! Form::label('email', trans('site/user.e_mail'), array('class' => 'control-label')) !!}
                             <div class="controls">
-                                <input type="email" name="email" class="form-control" required></input>
+                                <input type="email" name="email" class="form-control" placeholder="E-Mail" required></input>
                                 <!-- {!! Form::text('email', null, array('class' => 'form-control')) !!} -->
                                 <span class="help-block">{{ $errors->first('email', ':message') }}</span>
                             </div>

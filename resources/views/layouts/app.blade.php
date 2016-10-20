@@ -10,6 +10,8 @@
 
 <link rel="stylesheet" type="text/css" href="{{ asset('Site.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/templatemo-style.css')}}">
+
 <script type="text/javascript" src="{ asset('css/'bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{ asset('css/jquery.js')}}"></script>
 
@@ -26,7 +28,7 @@
 
 @yield('styles')
 <style type="text/css">
-*
+*,a,h2,h1,h3,h4,h5,h6
 {
   font-family: 'Raleway';
   font-style: normal;

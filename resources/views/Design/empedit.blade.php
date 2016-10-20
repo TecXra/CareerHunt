@@ -41,7 +41,7 @@
             </div>
             <div class="col-lg-6">
             <div class="form-group">
-                <input type="file" name="company_logo" class="form-control" accept="image/*">
+                <input type="file" name="company_logo" class="form-control">
             </div>
 
                 <div class="form-group">

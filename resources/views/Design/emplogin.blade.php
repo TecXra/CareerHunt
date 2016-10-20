@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('styles')
-    <style>
+<style>
    .col-md-3{
         height:600px;
     }
@@ -38,38 +38,38 @@
         color: #f03761;
         text-shadow: 2px 2px rgba(134,134,134, 0.4);
     }
-input{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 3px solid #ccc;
-    -moz-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-}
-label{
-    color: #FCB53B;
-}
-button {
-    background-color: #f03761;; /* Green */
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-}
-#link{
-    text-align: center;
-    color: red;
-}
-#forgot-password
-{
-    color: blue;
-}
+    input{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 3px solid #ccc;
+        -moz-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+    }
+    label{
+        color: #FCB53B;
+    }
+    button {
+        background-color: #f03761;; /* Green */
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+    }
+    #link{
+        text-align: center;
+        color: red;
+    }
+    #forgot-password
+    {
+        color: blue;
+    }
 </style>
 
 @endsection
@@ -133,9 +133,8 @@ button {
                             </div> 
     -->
                             <div class="col-md-12 text-center">
-                                <a href="{{URL::to('index')}}" id="link" class="blink1">
-                                    New Here? Create an account.
-                        </div>
+                                <a href="#" id="link" class="blink1" data-toggle="modal" data-target="#myModal">New Here? Create an account.</a>
+                            </div>
                     </div>
 
                 <div class="col-md-2"> </div>
@@ -143,6 +142,41 @@ button {
         </div>
     <div class="col-md-3"> </div> 
 </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal 1-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="border: solid black;">
+  <div class="modal-dialog" role="document" style="border: solid; width: 70%;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Search Provider</h4>
+      </div>
+      <div class="modal-body">
+        <h3>Choose From Following two Options: </h3>
+        <h4>
+            <a href="#">I am A Job Seeker</a>
+        </h4>
+        <h4>
+            <a href="#">I am Employer</a>
+        </h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" style="padding-top: 0.8%;">Close</button>
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2" style="margin-top: 0px; padding-top: 0.8%;">Search</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 @endsection
