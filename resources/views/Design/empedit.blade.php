@@ -1,4 +1,4 @@
-@extends('layouts.app3')
+@extends('layouts.app2')
 
 
 @section('content')
@@ -41,8 +41,7 @@
             </div>
             <div class="col-lg-6">
             <div class="form-group">
-                                <input type="file" name="company_logo" class="form-control">
- 
+                <input type="file" name="company_logo" class="form-control" accept="image/*">
             </div>
 
                 <div class="form-group">

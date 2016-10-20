@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 
 @section('styles')
@@ -14,8 +14,8 @@
     }
 </style>
 @endsection
-{{ Auth::user()->name }}
-
+<!-- {{ Auth::user()->name }}
+ -->
 
 @section('content')
 <div class="container-fluid" style="margin-bottom: 1%;">

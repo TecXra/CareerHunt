@@ -6,8 +6,8 @@
 
 
 @section('content')
-{{ Auth::user()->name }}
-
+<!-- {{ Auth::user()->name }}
+ -->
 {!! Form::model($Pinfos, array('url' => URL::to('jsupdate') . '/' . $Pinfos->id, 'method' => 'post','files'=>true)) !!}
 
         <div class="row text-center">

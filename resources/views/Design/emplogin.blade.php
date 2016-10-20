@@ -102,7 +102,8 @@ button {
                         <div class="form-group  {{ $errors->has('email') ? 'has-error' : '' }}">
                             {!! Form::label('email', "E-Mail Address", array('class' => 'control-label')) !!}
                             <div class="controls">
-                                {!! Form::text('email', null, array('class' => 'form-control')) !!}
+                                <input type="email" name="email" class="form-control" placeholder="E-Mail" required></input>
+                                <!-- {!! Form::text('email', null, array('class' => 'form-control')) !!} -->
                                 <span class="help-block">{{ $errors->first('email', ':message') }}</span>
                             </div>
                         </div>
@@ -110,7 +111,8 @@ button {
                         <div class="form-group  {{ $errors->has('password') ? 'has-error' : '' }}">
                             {!! Form::label('password', "Password", array('class' => 'control-label')) !!}
                             <div class="controls">
-                                {!! Form::password('password', array('class' => 'form-control')) !!}
+                                <input type="password" name="password" placeholder="Password" id="confirm_password" class="form-control" required>
+                                <!-- {!! Form::password('password', array('class' => 'form-control')) !!} -->
                                 <span class="help-block">{{ $errors->first('password', ':message') }}</span>
                             </div>
                         </div>

@@ -56,7 +56,7 @@
 @include('partials.index-header3')
 
 
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top: 1%;">
   @yield('content')
 </div>
 

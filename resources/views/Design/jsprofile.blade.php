@@ -56,7 +56,7 @@
 <!-- 
     <form action="storejobseeker" method="post" files="true">
  -->
-{{ Auth::user()->name }}
+<!-- {{ Auth::user()->name }} -->
 <div class="container-fluid" style="margin-bottom: 1%;">
     {!! Form::open(array('url' => URL::to('storejobseeker'), 'method' => 'post','files'=> true)) !!}
         <div class="row text-center">
