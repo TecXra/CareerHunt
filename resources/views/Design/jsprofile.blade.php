@@ -288,7 +288,7 @@
         </div>
             <h4 style="margin-left: 1%;">Type Total Experience in Years: </h4>
 
-            <input type="number" name="exp" class="form-control">
+            <input type="text" name="exp" class="form-control" required>
             </input>
 
         <div class="row text-center">
