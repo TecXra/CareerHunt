@@ -27,6 +27,7 @@ class EmployerController extends Controller
    public function __construct()
     {
         $this->middleware('auth',['except' => ['emsignup', 'store','emplogin']]);
+        $this->middleware('guest',['only' => ['emplogin']]);
 
         //$this->middleware('log', ['only' => ['fooAction', 'barAction']]);
 

@@ -28,7 +28,7 @@ class JobSeekerController extends Controller
 
   public function __construct()
     {
-        $this->middleware('auth',['except' => ['jssignup','storejobseeker']]);
+        $this->middleware('auth',['except' => ['jssignup','storejobseeker','index']]);
 
         //$this->middleware('log', ['only' => ['fooAction', 'barAction']]);
 
