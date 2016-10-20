@@ -34,7 +34,7 @@
                 </div>
                 <div class="form-group">
                     {!! Form::label('Phone Number: ') !!}
-                    {!! Form::number('phone',null,['class'=>'form-control','placeholder' => 'Enter Phone Number']) !!}
+                    {!! Form::text('phone',null,['class'=>'form-control','placeholder' => 'Enter Phone Number', 'required']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('Address') !!}
@@ -86,7 +86,7 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     {!! Form::label('Matric') !!}
-                    <input list = "Matric" name="matric" class="form-control" placeholder="Major Subjects">
+                    <input list = "Matric" name="matric" class="form-control" placeholder="Major Subjects" required>
                     <datalist id="Matric">
                         <option value="Science">Science</option>
                         <option value="Arts">Arts</option>
@@ -136,8 +136,6 @@
                         <option value="Accounting & Finance">Accounting & Finance</option>
                     </datalist>
                 </div>
-
-                
             </div>
         </div>
 
@@ -161,7 +159,7 @@
             <div class="col-lg-4">
                 <div class="form-group">
                     <label>Type Any Other Job Deatil</label>
-                    <input type="text" class="form-control" name="comp3" placeholder="Job Designation (Company Name)"></input>
+                    <input type="text" class="form-control" name="comp3" placeholder="Job Designation (Company Name)" required></input>
                 </div>
             </div>
         </div>
@@ -178,7 +176,7 @@
                 </div>
                 <div class="form-group">
                     <label>1: Researce and Publication Year</label>
-                    <input type="number" name="year1" placeholder="Researce and Publication Year" class="form-control"></input>
+                    <input type="text" name="year1" placeholder="Researce and Publication Year" class="form-control"></input>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -188,7 +186,7 @@
                 </div>
                 <div class="form-group">
                     <label>2: Researce and Publication Year</label>
-                    <input type="number" name="year2" placeholder="Researce and Publication Year" class="form-control"></input>
+                    <input type="text" name="year2" placeholder="Researce and Publication Year" class="form-control"></input>
                 </div>
             </div>
         </div>
@@ -219,10 +217,10 @@
         <div class="row">
             <h4 style="margin-left: 1%;">Type Any Three Skills: </h4>
             <div class="col-lg-4">
-                <input type="text" name="Skill1" placeholder="Skill One" class="form-control"></input>
+                <input type="text" name="Skill1" placeholder="Skill One" class="form-control" required></input>
             </div>
             <div class="col-lg-4">
-                <input type="text" name="Skill2" placeholder="Skill Two" class="form-control"></input>                
+                <input type="text" name="Skill2" placeholder="Skill Two" class="form-control" required></input>                
             </div>
             <div class="col-lg-4">
                 <input type="text" name="Skill3" placeholder="Skill Three" class="form-control"></input>                
@@ -234,7 +232,7 @@
         </div>
             <h4 style="margin-left: 1%;">Type Total Experience in Years: </h4>
 
-            <input type="number" name="exp" class="form-control">
+            <input type="text" name="exp" class="form-control" required>
             </input>
 
         <div class="row text-center">
@@ -246,7 +244,7 @@
 
             </div>
             <div class="col-lg-4">
-                <textarea rows="4" cols="50" name="about_you"class="form-control">
+                <textarea rows="4" cols="50" name="about_you"class="form-control" required>
                     Write something about yourself in few sentencs...
                 </textarea>
 

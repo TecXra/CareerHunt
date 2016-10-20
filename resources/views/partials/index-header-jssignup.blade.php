@@ -6,11 +6,11 @@
         </div>
 
         <div class="col-lg-6" id="reg-col">
-            <ul id="nav-reg1" class="nav navbar-nav" style="margin-left: 0%;">
-                <li id="nav-reg12"><a href="">Search Job Other Seeker</a></li>
-                <li id="nav-reg12"><a href="{{action('JobSeekerController@jsdashboard',[Auth::user()->id]) }}">Goto Dashboard</a> </li>
-                <li id="nav-reg12"><a href="{{ URL::to('logout')}}">Logout</a></li>
-                <li id="nav-reg12"><a href="#"> Welcome {{ Auth::user()->name }}</a></li>
+            <ul id="nav-reg1" class="nav navbar-nav">
+<!--                 <li id="nav-reg12"><a href="{{ URL::to('jssignup')}}">Register Job Seeker</a></li> -->
+                <li id="nav-reg12"><a href="{{ URL::to('emsignup')}}">Register Employer</a> </li>
+                <!-- <li id="nav-reg12"><a href="{{ URL::to('jslogin')}}">Login as Job Seeker</a> </li> -->
+                <li id="nav-reg12"><a href="{{ URL::to('emplogin')}}">Login</a> </li>
             </ul>
         </div>
     </div>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.login_app')
 
 @section('styles')
 <style>
@@ -132,9 +132,9 @@
                                 <a href="{{ URL::to('/password/email') }}" id="forgot-password" style="border: solid;">Forgot Your Password?</a>    
                             </div> 
     -->
-                            <div class="col-md-12 text-center">
+<!--                             <div class="col-md-12 text-center">
                                 <a href="#" id="link" class="blink1" data-toggle="modal" data-target="#myModal">New Here? Create an account.</a>
-                            </div>
+                            </div> -->
                     </div>
 
                 <div class="col-md-2"> </div>
@@ -155,7 +155,7 @@
 
 
 <!-- Modal 1-->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="border: solid black;">
+<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="border: solid black;">
   <div class="modal-dialog" role="document" style="border: solid; width: 70%;">
     <div class="modal-content">
       <div class="modal-header">
@@ -178,21 +178,21 @@
     </div>
   </div>
 </div>
-
+ -->
 @endsection
 
 
 
 
 @section('scripts')
-    <script>
+<!--     <script>
     function blinker() {
         $('.blink1').fadeOut(500);
         $('.blink1').fadeIn(500);
     }
     setInterval(blinker, 1000);
     </script>
-@endsection
+ -->@endsection
 
 
 

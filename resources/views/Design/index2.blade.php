@@ -4,6 +4,100 @@
 
 @section('styles')
 <style type="text/css">
+.jumbotron
+{
+    background-color: lightblue;
+}
+.tm-about-box-1
+{
+/*  padding-bottom: 5%;*/
+    margin-top: 15%;
+    height: 100%;
+    width: 90%;
+    padding:0%;
+    border: solid 1px lightblue;
+    padding-top: 5px;
+    box-shadow: 0 1px 10px rgba(0,1,1,.2);
+}
+.tm-about-box-1-img 
+{
+    width: 30%;
+    height: 90px;
+    margin-left: 35%;
+    margin-top: -14%;
+    border-radius: 50%;
+    border: 5px solid lightblue;
+    transition: all 0.5s ease;
+}
+.tm-about-box-1:hover .tm-about-box-1-img,
+.tm-about-box-1:focus .tm-about-box-1-img
+{
+    border: 5px solid blue;  
+}
+.tm-about-box-1:hover .app-detail,
+.tm-about-box-1:focus .app-detail
+{
+}
+.app-heading
+{
+    margin-top: 0%;
+    color: black;
+    border-bottom: solid 1px lightblue;
+    border-radius: 5px;
+    width: 80%;
+    padding: 1%;
+    margin-left: 20%;
+}
+.app-detail
+{
+    box-shadow: 0 1px 10px rgba(0,1,1,.2);
+    width: 110%;
+    margin-left: -5%;
+/*  background-color: white;*/
+    background-color: lightblue;
+    color: black;
+    margin-top: 6%;
+    border: solid 1px lightblue;
+    transition: 1s;
+}
+.gray-text
+{
+    margin-left: 25%;
+    color: black;
+}
+.btn-default
+{
+    background-color: #fff;
+    box-shadow: 0 1px 10px rgba(0,1,1,.2);
+    width: 40%;
+    border-radius: 0px;
+    border: solid 1px lightblue;
+    color: black;
+    height: 35px;
+    margin-left: 30%;
+    margin-top:6%;
+    margin-bottom: 7%;
+    padding-top:2%;
+    text-transform: uppercase;
+    transition: 1s;
+    font-weight: 400;
+}
+.btn-default:hover
+{
+    background: lightblue;
+    color: black;
+}
+.app-detail > span
+{
+    font-weight: bold;
+}
+#topjs-heading
+{
+    margin-left: 35%;
+    padding-bottom: 1%;
+    border-bottom: solid lightblue;
+    width: 30%;
+}
     #logo
     {
         transition: transform 3s;
@@ -25,11 +119,10 @@
 
 <!--Search Option Starts Here-->
 
-<div class="container-fluid">
     <div class="container-fluid" style="margin-bottom: 1%; margin-top: 1%;">
         <div class="jumbotron" style="margin-top: 1%;">
             <div class="container text-center">
-                <h2 id="search-h1">
+                <h2 id="search-h1"style="padding-bottom: 2%; color: rgb(50,100,250);">
                     Search online and find Employers in Pakistan
                 </h2>
                 <form action="searchauth" method="get" files="true">
@@ -478,8 +571,38 @@
             </div> 
         </div>
 
-
     <div class="row">
+        <div class="col-lg-12">
+            <h1 id="topjs-heading">
+                Top Three Job Seekers
+            </h1>
+        </div>
+    </div>
+ 
+    <div class="row" style="padding: 1%;">
+        @foreach($Pinfos as $Pinfo)
+            @if($Pinfo->username!=='' && $Pinfo->email!=='' && $Pinfo->image!=='' && $Pinfo->age!=='' && $Pinfo->phone!=='' && $Pinfo->address!=='' && $Pinfo->country!=='' && $Pinfo->city!=='' && $Pinfo->town!=='' && $Pinfo->martial_status!=='' && $Pinfo->nationality!=='' && $Pinfo->religion!=='' && $Pinfo->matric!=='' && $Pinfo->intermediate!=='' && $Pinfo->bs_bsc!=='' && $Pinfo->Skill1!=='' && $Pinfo->exp!=='' && $Pinfo->about_you!=='')
+
+                <div class="col-lg-4">
+                    <div class="tm-about-box-1">
+                        <img src="{{ asset($Pinfo->image) }}" alt="Job Seeker Image" class="tm-about-box-1-img"/>
+                        <h3 class="app-heading">{{$Pinfo->username}}</h3>
+                        <p class="app-detail">
+                            <label class="gray-text">Residence: <span>{{$Pinfo->city}} ({{$Pinfo->country}})</span> </label><br/>
+                            <label class="gray-text">Job Experience: <span>{{$Pinfo->exp}}</span> </label><br/>
+                            <label class="gray-text">Skills: <span>{{$Pinfo->Skill1}} , {{$Pinfo->Skill2}} , {{$Pinfo->Skill3}}</span> </label><br/>
+                        </p>
+                        <a href="#" class="btn btn-default">View Detail</a>
+                    </div>
+                </div>
+
+            @endif
+
+        @endforeach
+
+    </div>
+
+<!--     <div class="row">
         <div class="col-lg-12">
             <h1>
                 Available Job Seekers
@@ -501,7 +624,8 @@
             @endif
         @endforeach
     </div>
-</div>
+ -->
+ </div>
 @endsection
 
 

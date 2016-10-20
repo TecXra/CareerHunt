@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.emdashboard-app')
 
 
 @section('styles')
@@ -29,6 +29,7 @@
         <h4>Company Logo</h4>
         <a href="Design/{{ $Compinfo->id }}"><img src="{{ asset($Compinfo->company_logo) }}" class="img-thumbnail" style="width:200px; height:150px;" /></a><br/>        
       </div>
+
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="border-right: solid 1px lightblue;">
         <h5>
           <label>Company Name: <span>{{Auth::user()->name}}</span> </label> 

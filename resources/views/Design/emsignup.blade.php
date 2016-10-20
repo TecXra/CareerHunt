@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.empsignup_app')
 
 @section('styles')
 
@@ -79,7 +79,7 @@
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="row" id="login">
-                <h3 class="text-center">I am a Employer</h3>
+                <h3 class="text-center" style="margin-top: 2%; margin-bottom: 1%;">I am a Employer</h3>
                 <div class="col-md-3"></div>
                 <div class="col-md-6" id="login-form">
                     {!! Form::open(array('action' => 'UsersController@register')) !!}

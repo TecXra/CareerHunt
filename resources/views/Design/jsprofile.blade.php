@@ -79,16 +79,17 @@
                     {!! Form::hidden('email',$Juser->email,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group" style="width: 50%;">
-                    {!! Form::label('Profile Picture') !!}
-                    <input type="file" name="image" class="form-control" accept="image/*">
+                    {!! Form::label('Profile Picture *') !!}
+                    <input type="file" name="image" class="form-control" accept="image/*" required>
                 </div>
                 <div class="form-group">
                     {!! Form::label('Date-of-Birth') !!}
                     {!! Form::date('age',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group">
-                    {!! Form::label('Phone Number: ') !!}
-                    {!! Form::number('phone',null,['class'=>'form-control','placeholder' => 'Enter Phone Number']) !!}
+                    {!! Form::label('Phone Number *: ') !!}
+                    <input type="text" name="phone" class="form-control" placeholder="Enter Phone Number" required> </input>
+<!--                     {!! Form::number('phone',null,['class'=>'form-control','placeholder' => 'Enter Phone Number']) !!} -->
                 </div>
                 <div class="form-group">
                     {!! Form::label('Address') !!}
@@ -96,8 +97,8 @@
                 </div>
                 <div class="form-group form-inline">
                     {!! Form::text('town',null,['class'=>'form-control','placeholder' => 'Town']) !!}
-
-                    {!! Form::text('city',null,['class'=>'form-control city','placeholder' => 'City']) !!}
+                    <input type="text" name="city" class="form-control city" placeholder="City *" required> </input>
+<!--                     {!! Form::text('city',null,['class'=>'form-control city','placeholder' => 'City']) !!} -->
                     
                     {!! Form::text('country',null,['class'=>'form-control country','placeholder' => 'Country']) !!}
                 </div>
@@ -121,13 +122,13 @@
                     null, ['class' => 'form-control', 'placeholder'=>'Select Status' ]); !!}
                 </div>
                 <div class="form-group">
-                    {!! Form::label('Gender') !!}
+                    {!! Form::label('Gender *') !!}
                     {!! Form::select('gender', 
                         [
                             'Male' => 'Male',
                             'Female' => 'Female'
                         ],
-                    null, ['class' => 'form-control', 'placeholder'=>'Select Gender' ]); !!}
+                    null, ['class' => 'form-control', 'placeholder'=>'Select Gender','required' ]); !!}
                 </div>
             </div>
         </div>
@@ -139,8 +140,8 @@
         <div class="row" id="edu-info">
             <div class="col-lg-6">
                 <div class="form-group">
-                    {!! Form::label('Matric') !!}
-                    <input list = "Matric" name="matric" class="form-control" placeholder="Major Subjects">
+                    {!! Form::label('Matric *') !!}
+                    <input list = "Matric" name="matric" class="form-control" placeholder="Major Subjects" required>
                     <datalist id="Matric">
                         <option value="Science">Science</option>
                         <option value="Arts">Arts</option>
@@ -214,8 +215,8 @@
             </div>
             <div class="col-lg-4">
                 <div class="form-group">
-                    <label>Type Any Other Job Deatil</label>
-                    <input type="text" class="form-control" name="comp3" placeholder="Job Designation (Company Name)"></input>
+                    <label>Last Company Detail Where You Worked</label>
+                    <input type="text" class="form-control" name="comp3" placeholder="Job Designation (Company Name)" required></input>
                 </div>
             </div>
         </div>
@@ -271,12 +272,12 @@
         </div>
         <hr/>
         <div class="row">
-            <h4 style="margin-left: 1%;">Type Any Three Skills: </h4>
+            <h4 style="margin-left: 1%;">Type At Least Two Skills: </h4>
             <div class="col-lg-4">
-                <input type="text" name="Skill1" placeholder="Skill One" class="form-control"></input>
+                <input type="text" name="Skill1" placeholder="Skill One" required class="form-control"></input>
             </div>
             <div class="col-lg-4">
-                <input type="text" name="Skill2" placeholder="Skill Two" class="form-control"></input>                
+                <input type="text" name="Skill2" placeholder="Skill Two" required class="form-control"></input>                
             </div>
             <div class="col-lg-4">
                 <input type="text" name="Skill3" placeholder="Skill Three" class="form-control"></input>                
@@ -287,20 +288,17 @@
             <h2><i>Industrial Experience</i></h2>
         </div>
             <h4 style="margin-left: 1%;">Type Total Experience in Years: </h4>
-
             <input type="text" name="exp" class="form-control" required>
             </input>
-
         <div class="row text-center">
             <h2><i>Write something about yourself...</i></h2>
         </div>
         <hr/>
         <div class="row">
             <div class="col-lg-4">
-
             </div>
             <div class="col-lg-4">
-                <textarea rows="4" cols="50" name="about_you"class="form-control">
+                <textarea rows="4" cols="50" name="about_you"class="form-control" required="">
                     Write something about yourself in few sentencs...
                 </textarea>
 

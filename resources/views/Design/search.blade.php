@@ -1,21 +1,46 @@
 @extends('layouts.app')
 
+@section('styles')
+
+<style type="text/css">
+  #detail-row
+  {
+    padding: 1%;
+  }
+  #detail-col
+  {
+    box-shadow: 0 1px 10px rgba(0,1,1,.2);
+    width: 25%;
+    padding: 1%;
+    border: solid 1px lightblue;
+  }
+
+
+</style>
+@endsection
+
 
 
 @section('content')
-
-
 
 @if (count($articles) === 0)
 There is no such job seeker or the job seeker required not lies in the specific area
 @elseif (count($articles) >= 1)
 
     @foreach($articles as $article)
-    @if($article->city===$region)
-<label>name: </label>    {{$article->username}}
-<label>City: </label>    {{$article->city}}
+      @if($article->city===$region)
 
-@endif
+<div class="row" style="padding:2%;" id="detail-row">
+  <div class="col-lg-3" id="detail-col">
+    <label>Name: </label>    {{$article->username}}
+    <br/>
+    <label>City: </label>    {{$article->city}}
+    <br/>
+    <label>Skill: </label>    {{$article->Skill1}}<br/>
+        <a href="{{action('SearchController@jsdetail',[ $article->id]) }}" class="btn btn-info">View Complete Profile</a>
+  </div>
+</div>
+      @endif
     @endforeach
 @endif
 

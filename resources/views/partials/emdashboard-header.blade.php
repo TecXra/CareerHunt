@@ -1,3 +1,15 @@
+<style type="text/css">
+    #reg-col
+    {
+    }
+    #nav-reg1
+    {
+        margin-left: 0%;
+    }
+
+</style>
+
+
 <!--Header Starts Here-->
 <div class="container-fluid" id="header">
     <div class="row">
@@ -6,11 +18,12 @@
         </div>
 
         <div class="col-lg-6" id="reg-col">
-            <ul id="nav-reg1" class="nav navbar-nav" style="margin-left: 0%;">
-                <li id="nav-reg12"><a href="">Search Job Other Seeker</a></li>
-                <li id="nav-reg12"><a href="{{action('JobSeekerController@jsdashboard',[Auth::user()->id]) }}">Goto Dashboard</a> </li>
+            <ul id="nav-reg1" class="nav navbar-nav">
+                <li id="nav-reg12"><a href="{{ URL::to('index2')}}">Search Job Seeker</a></li>
+<!--                 <li id="nav-reg12"><a href="{{action('EmployerController@emdashboard',[ Auth::user()->id]) }}">Goto Dashboard</a> </li> -->
                 <li id="nav-reg12"><a href="{{ URL::to('logout')}}">Logout</a></li>
                 <li id="nav-reg12"><a href="#"> Welcome {{ Auth::user()->name }}</a></li>
+
             </ul>
         </div>
     </div>

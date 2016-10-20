@@ -33,16 +33,16 @@
                 <div class="fileupload-new thumbnail img-up">
                     <img alt="Company Logo" src="{{ asset('img/demoUpload.jpg')}}">
                 </div>
-                <input type="file" name="company_logo" class="form-control">
+                <input type="file" name="company_logo" class="form-control" required>
             </div>
             <div class="col-lg-5">
                 <div class="form-group">
                     <label>Company Head Name * </label>
-                    <input type="text" class="form-control" name="comp_head_name" placeholder="Mr. Ali">
+                    <input type="text" class="form-control" name="comp_head_name" placeholder="Head Name" required>
                 </div>
                 <div class="form-group">
                     <label>HR Head Name</label>
-                    <input type="text" class="form-control" name="head_hr_department" placeholder="Mr. Adnan">
+                    <input type="text" class="form-control" name="head_hr_department" placeholder="HR Head Name" required>
                 </div>
                 <div class="form-group">
                     <label>Company Slogan</label>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label>Company Website</label>
-                    <input type="text" class="form-control" name="comp_website" placeholder="www.pel.com.pk">
+                    <input type="email" class="form-control" name="comp_website" placeholder="www.example.com">
                 </div>
                 <div class="form-group">
                     <label>Address</label>
@@ -64,7 +64,7 @@
             <div class="col-lg-5">
                 <div class="form-group">
                     <label>Industry</label>
-                    <input list = "Industry" name="industry_type" placeholder="Industry Type" class="form-control">
+                    <input list = "Industry" name="industry_type" placeholder="Industry Type" class="form-control" required>
                     <datalist id="Industry">
                         <option value="Textile Industry">Textile Industry</option>
                         <option value="Vegetable Ghee and Cooking Oil Industry">Vegetable Ghee and Cooking Oil Industry</option>
@@ -150,7 +150,7 @@
                 </div>
                 <div class="form-group">
                     <label>Branches</label>
-                    <input list = "Branches" name="number_of_branches" class="form-control" placeholder="Branches">
+                    <input list = "Branches" name="number_of_branches" class="form-control" placeholder="Branches" required>
                     <datalist id="Branches">
                         <option value="0-1">0-1</option>
                         <option value="1-2">1-2</option>
@@ -160,7 +160,7 @@
                 </div>
                 <div class="form-group">
                     <label>Phone #:</label>
-                    <input type="text" class="form-control" name="phone" placeholder="Phone">
+                    <input type="text" class="form-control" name="phone" placeholder="Phone" required>
                 </div>
             </div>
         <!--Personal Information form ends here...-->
