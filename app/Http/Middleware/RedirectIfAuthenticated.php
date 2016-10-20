@@ -35,8 +35,8 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next)
     {
         if ($this->auth->check()) {
-$emdashboard='emdashboard/' . Auth::user();
-            return redirect($emdashboard);
+
+            return redirect()->back();
         }
 
         return $next($request);
