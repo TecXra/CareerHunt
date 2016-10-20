@@ -489,12 +489,16 @@
  
     <div class="row" style="margin-left:3%;">
         @foreach($Pinfos as $Pinfo)
+            @if($Pinfo->username!=='')
+
         <label>Job Seeker Name: </label>
             {{$Pinfo->username}}
         <label>Town Name: </label>
             {{$Pinfo->town}}
         <a href="Design/{{ $Pinfo->id }}"><img src="{{ asset($Pinfo->image) }}" style="width:200px; height:150px;" /></a>
-        <br/>
+                <a href="{{action('SearchController@jsdetail',[ $Pinfo->id]) }}" class="btn btn-info">View Complete Profile</a>
+            <br/>
+            @endif
         @endforeach
     </div>
 </div>
