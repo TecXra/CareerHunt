@@ -30,6 +30,9 @@ class JobSeekerController extends Controller
     {
         $this->middleware('auth',['except' => ['jssignup','storejobseeker','index']]);
 
+      
+        $this->middleware('guest', ['only' => 'jssignup' ]  );
+
         //$this->middleware('log', ['only' => ['fooAction', 'barAction']]);
 
       //  $this->middleware('subscribed', );
@@ -202,7 +205,7 @@ public function jsedit($id){
     public function jsupdate(Requests\PinfoRequest $request,$id){
         $Pinfos=Pinfo::findOrFail($id);
         $Pinfos->update($request->all());
-        $Pinfoshow = 'showjobseeker/' . $Pinfos->id ;
+        
 
         if (isset($request -> image)) 
         {
@@ -219,6 +222,7 @@ public function jsedit($id){
         $Pinfos->update(array('image' => $imageCompletePath));
 
 }
+$Pinfoshow = 'showjobseeker/' . $Pinfos->id ;
   return redirect ($Pinfoshow);
     }
 

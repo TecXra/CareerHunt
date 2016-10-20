@@ -482,7 +482,7 @@
  
     <div class="row" style="margin-left:3%;">
         @foreach($Pinfos as $Pinfo)
-            @if($Pinfo->username!=='')
+            @if($Pinfo->username!=='' && $Pinfo->email!=='' && $Pinfo->image!=='' && $Pinfo->age!=='' && $Pinfo->phone!=='' && $Pinfo->address!=='' && $Pinfo->country!=='' && $Pinfo->city!=='' && $Pinfo->town!=='' && $Pinfo->martial_status!=='' && $Pinfo->nationality!=='' && $Pinfo->religion!=='' && $Pinfo->matric!=='' && $Pinfo->intermediate!=='' && $Pinfo->email!=='' && $Pinfo->email!=='' && $Pinfo->email!=='' && $Pinfo->email!=='')
 
         <label>Job Seeker Name: </label>
             {{$Pinfo->username}}
@@ -490,7 +490,7 @@
             {{$Pinfo->town}}
         <a href="Design/{{ $Pinfo->id }}"><img src="{{ asset($Pinfo->image) }}" style="width:200px; height:150px;" /></a>
             <br/>
-
+@endif
         @endforeach
     </div>
 </div>

@@ -4,7 +4,7 @@
 
 @section('content')
 
-<a href="Design/{{ $Pinfos->id }}"><img src="{{ asset($Pinfos->image) }}" class="img-thumbnail" style="width:200px; height:150px;" /></a><br/>
+<img src="{{ asset($Pinfos->image) }}" class="img-thumbnail" style="width:200px; height:150px;" /><br/>
 {{ Auth::user()->name }}
 
 <br/>
