@@ -25,6 +25,15 @@ use App\Http\Controllers\Controller;
 
 class JobSeekerController extends Controller
 {
+
+  public function __construct()
+    {
+        $this->middleware('auth',['except' => ['jssignup','storejobseeker']]);
+
+        //$this->middleware('log', ['only' => ['fooAction', 'barAction']]);
+
+      //  $this->middleware('subscribed', );
+    }
     public function signup()
   {
     return view('Design.signup');

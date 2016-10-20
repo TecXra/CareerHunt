@@ -22,6 +22,16 @@ use App\Rpinfo;
 
 class SearchController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->middleware('auth',['except' => ['search']]);
+
+        //$this->middleware('log', ['only' => ['fooAction', 'barAction']]);
+
+      //  $this->middleware('subscribed', );
+    }
     public function search(Request $request)
 {
 //dd($request);

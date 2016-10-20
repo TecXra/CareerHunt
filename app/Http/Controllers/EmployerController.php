@@ -24,6 +24,15 @@ use App\Http\Controllers\Controller;
 
 class EmployerController extends Controller
 {
+   public function __construct()
+    {
+        $this->middleware('auth',['except' => ['emsignup', 'store','emplogin']]);
+
+        //$this->middleware('log', ['only' => ['fooAction', 'barAction']]);
+
+      //  $this->middleware('subscribed', );
+    }
+
     public function jobs()
     {
         return view('Design.jobs');
