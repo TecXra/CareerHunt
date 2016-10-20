@@ -589,10 +589,12 @@
  
     <div class="row" style="margin-left:3%;">
         @foreach($Pinfos as $Pinfo)
+        @if($Pinfo->username!=='')
         <label>Job Title: </label>
         <a href="Design/{{ $Pinfo->id }}"><img src="{{ asset($Pinfo->image) }}" style="width:200px; height:150px;" /></a><br/>
         <br/><br/>
 {{$Pinfo->town}}
+@endif
         @endforeach
     </div>
 </div>
