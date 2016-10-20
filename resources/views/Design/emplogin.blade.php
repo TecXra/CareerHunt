@@ -133,7 +133,7 @@ button {
                             </div> 
     -->
                             <div class="col-md-12 text-center">
-                                <a href="{{URL::to('emsignup')}}" id="link" class="blink1">
+                                <a href="{{URL::to('index')}}" id="link" class="blink1">
                                     New Here? Create an account.
                         </div>
                     </div>

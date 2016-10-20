@@ -1,9 +1,18 @@
 @extends('layouts.app4')
 
 
+
+
+
+
+
 @section('content')
-<h2>job seeker dashboard<br/>
+
+<h2 class="text-center">Job Seeker dashboard</h2>
+
+<hr/>
+
 {{ Auth::user()->name }}
-	<a href="{{action('JobSeekerController@jsedit',[ $Pinfos->id]) }}">Edit Profile</a>
-</h2>
+<br/>
+	<a href="{{action('JobSeekerController@jsedit',[ $Pinfos->id]) }}" class="btn btn-info">Edit Profile</a>
 @endsection

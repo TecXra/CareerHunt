@@ -20,113 +20,6 @@
 
 
 @section('content')
-<!--Main Navigation Bar Starts Here-->
-
-<!--     <div class="row">
-        <div class="col-md-8">
-            <ul class="nav navbar-nav navbar-right" id="main-nav-ul">
-                <li id="main-nav-li"><a href="{{ URL::to('index')}}">Home</a></li>
-                <li id="main-nav-li"><a href="#">Jobseekers</a>
-                    <ul id="ul-123">
-                        <li id="li-456"><a href="{{ URL::to('jobseekers')}}">Asif Sharif Shahid</a></li>
-                        <li id="li-456"><a href="{{ URL::to('jobseekers')}}">Saad Rafique</a></li>
-                        <li id="li-456"><a href="{{ URL::to('jobseekers')}}">Ali Raza</a></li>
-                        <li id="li-456"><a href="{{ URL::to('jobseekers')}}">Ali Haider</a></li>
-                        <li id="li-456"><a href="{{ URL::to('jobseekers')}}">Tahira Zafer</a></li>
-                        <li id="li-456"><a href="{{ URL::to('jobseekers')}}">Sahar Naaz</a></li>
-                        <li id="li-456"><a href="{{ URL::to('jobseekers')}}">Yuneeb Arshad</a></li>
-                        <li id="li-456"><a href="{{ URL::to('jobseekers')}}">Maqsood Ahter</a></li>
-                        <li id="li-456"><a href="{{ URL::to('jobseekers')}}">Click Here For More</a></li>
-                    </ul>
-                </li>
-                <li id="main-nav-li"><a href="#">Employers</a>
-                    <ul id="ul-123">
-                        <li id="li-456"><a href="#">Softec&reg;</a></li>
-                        <li id="li-456"><a href="#">Orient&reg;</a></li>
-                        <li id="li-456"><a href="#">PEL&reg;</a></li>
-                        <li id="li-456"><a href="#">Techlogics&reg;</a></li>
-                        <li id="li-456"><a href="#">Dawlance&reg;</a></li>
-                        <li id="li-456"><a href="#">Gul Ahmed&reg;</a></li>
-                        <li id="li-456"><a href="#">Waves&reg;</a></li>
-                        <li id="li-456"><a href="#">Netsol&reg;</a></li>
-                        <li id="li-456"><a href="#">Click Here For More</a></li>
-                    </ul>
-                </li>
-                <li id="main-nav-li"><a href="#">Latest Jobs</a>
-                    <ul id="ul-123">
-                        <li id="li-456"><a href="{{URL::to('jobs')}}">Data Entry Operator</a></li>
-                        <li id="li-456"><a href="{{URL::to('jobs')}}">Java Developer</a></li>
-                        <li id="li-456"><a href="{{URL::to('jobs')}}">Call Center Operator</a></li>
-                        <li id="li-456"><a href="{{URL::to('jobs')}}">Hotel Receptionist</a></li>
-                        <li id="li-456"><a href="{{URL::to('jobs')}}">Software Engineer</a></li>
-                        <li id="li-456"><a href="{{URL::to('jobs')}}">SEO Expert</a></li>
-                        <li id="li-456"><a href="{{URL::to('jobs')}}">Graphic Designer</a></li>
-                        <li id="li-456"><a href="{{URL::to('jobs')}}">Driver</a></li>
-                        <li id="li-456"><a href="{{URL::to('jobs')}}">Click Here For More Jobs</a></li>
-                    </ul>
-                </li>
-                <li id="main-nav-li"><a href="#">About</a>
-                    <ul id="ul-123">
-                        <li id="li-456"><a href="#">Website Info</a></li>
-                        <li id="li-456"><a href="#">Website Developers</a></li>
-                        <li id="li-456"><a href="#">Address</a></li>
-                        <li id="li-456"><a href="#">E-Mail</a></li>
-                        <li id="li-456"><a href="#">Phone #</a></li>
-                        <li id="li-456"><a href="#">Click Here For More</a></li>
-                    </ul>
-                </li>
-                <li id="main-nav-li"><a href="#">Contact</a>
-                    <ul id="ul-123">
-                        <li id="li-456"><a href="#">
-                            <img src="{{ asset('img/fb.png')}}">
-                        </a></li>
-                        <li id="li-456"><a href="#">
-                            <img src="{{ asset('img/twitter.png')}}">
-                        </a></li>
-                        <li id="li-456"><a href="#">
-                            <img src="{{ asset('img/outlook.png')}}">
-                        </a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-4"></div>
-    </div>
- -->
-<!--Main Navigation Bar Starts Here-->
-
-<!--Color Divide Row Starts Here-->
-<!--     <div class="row">
-        <div class="col-sm-1" style="border-top: solid lightblue"></div>
-        <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
-        <div class="col-sm-1" style="border-top: solid lightblue"></div>
-        <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
-        <div class="col-sm-1" style="border-top: solid lightblue"></div>
-        <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
-        <div class="col-sm-1" style="border-top: solid lightblue"></div>
-        <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
-        <div class="col-sm-1" style="border-top: solid lightblue"></div>
-        <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
-        <div class="col-sm-1" style="border-top: solid lightblue"></div>
-        <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
-    </div>
-    <div class="row">
-        <div class="col-sm-1" style="border-top: solid lightblue"></div>
-        <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
-        <div class="col-sm-1" style="border-top: solid lightblue"></div>
-        <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
-        <div class="col-sm-1" style="border-top: solid lightblue"></div>
-        <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
-        <div class="col-sm-1" style="border-top: solid lightblue"></div>
-        <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
-        <div class="col-sm-1" style="border-top: solid lightblue"></div>
-        <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
-        <div class="col-sm-1" style="border-top: solid lightblue"></div>
-        <div class="col-sm-1" style="border-top: solid antiquewhite"></div>
-    </div>
- --><!--Color Divide Row Ends Here-->
-
-<!--Search Option Starts Here-->
 
         <div class="jumbotron" style="margin-top: 1%;">
             <div class="container text-center">
@@ -589,10 +482,12 @@
  
     <div class="row" style="margin-left:3%;">
         @foreach($Pinfos as $Pinfo)
-        <label>Job Title: </label>
-        <a href="Design/{{ $Pinfo->id }}"><img src="{{ asset($Pinfo->image) }}" style="width:200px; height:150px;" /></a><br/>
-        <br/><br/>
-{{$Pinfo->town}}
+        <label>Job Seeker Name: </label>
+            {{$Pinfo->username}}
+        <label>Town Name: </label>
+            {{$Pinfo->town}}
+        <a href="Design/{{ $Pinfo->id }}"><img src="{{ asset($Pinfo->image) }}" style="width:200px; height:150px;" /></a>
+            <br/>
         @endforeach
     </div>
 </div>

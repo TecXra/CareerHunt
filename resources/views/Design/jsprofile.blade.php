@@ -80,7 +80,7 @@
                 </div>
                 <div class="form-group" style="width: 50%;">
                     {!! Form::label('Profile Picture') !!}
-                    <input type="file" name="image" class="form-control">
+                    <input type="file" name="image" class="form-control" accept="image/*">
                 </div>
                 <div class="form-group">
                     {!! Form::label('Date-of-Birth') !!}

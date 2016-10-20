@@ -5,10 +5,8 @@
 <title>Main</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
-
 <script type="text/javascript" src="{{ asset ('js/angular.min.js')}}"></script>
 <script type="text/javascript" src="{{ asset ('js/angular.js')}}"></script>
-
 
 <link rel="stylesheet" type="text/css" href="{{ asset('Site.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css')}}">
@@ -39,7 +37,7 @@
 
 </style>
 
-<body ng-app="sampleApp">
+<body>
 
 <!-- <div ng-controller="myCtrl">
   <% firstName + " " + lastName %>

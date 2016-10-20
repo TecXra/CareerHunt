@@ -22,6 +22,7 @@
 @section('content')
 <!--Main Navigation Bar Starts Here-->
 
+
 <!--Search Option Starts Here-->
 
 <div class="container-fluid">
@@ -488,16 +489,15 @@
  
     <div class="row" style="margin-left:3%;">
         @foreach($Pinfos as $Pinfo)
-        <label>Job Title: </label>
-        <a href="Design/{{ $Pinfo->id }}"><img src="{{ asset($Pinfo->image) }}" style="width:200px; height:150px;" /></a><br/>
-        <br/><br/>
+        <label>Job Seeker Name: </label>
+            {{$Pinfo->username}}
+        <label>Town Name: </label>
             {{$Pinfo->town}}
+        <a href="Design/{{ $Pinfo->id }}"><img src="{{ asset($Pinfo->image) }}" style="width:200px; height:150px;" /></a>
+        <br/>
         @endforeach
     </div>
 </div>
-</div>
-</div>
-
 @endsection
 
 
